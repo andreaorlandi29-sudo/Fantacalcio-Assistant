@@ -1,0 +1,63 @@
+name: Aggiorna dati Fantacalcio
+
+# Aggiorna quotazioni + statistiche + dataset unificato una volta al giorno,
+# e committa su main solo se qualcosa e' cambiato.
+
+on:
+  schedule:
+    # cron in UTC. 07:00 UTC = 09:00 in Italia d'estate (CEST) / 08:00 d'inverno (CET).
+    # GitHub non gestisce l'ora legale: in inverno partira' alle 08:00 italiane.
+    - cron: "0 7 * * *"
+  workflow_dispatch: {}   # avvio manuale dalla tab Actions (per testarlo subito)
+
+# serve per far pushare il commit automatico con il token integrato GITHUB_TOKEN
+permissions:
+  contents: write
+
+# evita esecuzioni sovrapposte
+concurrency:
+  group: aggiorna-dati
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      # Nessuna dipendenza esterna: gli script usano solo la libreria standard.
+
+      # Gli step girano in ordine. Se uno fallisce (es. il sito cambia
+      # struttura o non risponde), il job si ferma qui e risulta FALLITO
+      # (X rossa) -> GitHub ti invia la notifica. Nessun retry aggressivo:
+      # una sola richiesta per esecuzione, coerente con l'uso ~1 volta/giorno.
+      - name: 1) Estrai quotazioni
+        run: python3 scripts/estrai_quotazioni.py
+
+      - name: 2) Estrai statistiche (3 stagioni)
+        run: python3 scripts/estrai_statistiche.py
+
+      - name: 3) Unisci dataset
+        run: python3 scripts/unisci_dataset.py
+
+      # Nota: data/classifiche_squadre.csv e' un file statico (classifiche finali
+      # da Wikipedia), non generato da uno script: non va rigenerato qui.
+
+      - name: 4) Commit & push se i dati sono cambiati
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/; then
+            echo "Nessuna modifica ai dati: nessun commit."
+          else
+            echo "Dati cambiati: committo e pusho."
+            git add data/
+            git commit -m "Aggiornamento automatico dati ($(date -u +%Y-%m-%d))"
+            git push
+          fi
