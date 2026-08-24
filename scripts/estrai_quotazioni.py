@@ -30,7 +30,7 @@ UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120 Safari/537.36")
 OUT = Path(__file__).resolve().parent.parent / "data" / "quotazioni_fantacalcio.csv"
 
-HEADER = ["nome", "squadra", "ruolo_classic", "ruolo_mantra",
+HEADER = ["player_id", "nome", "squadra", "ruolo_classic", "ruolo_mantra",
           "classic_qi", "classic_qa", "classic_fvm",
           "mantra_qi", "mantra_qa", "mantra_fvm"]
 
@@ -56,6 +56,9 @@ def parse(raw: str) -> list[list[str]]:
         nome = ihtml.unescape(nome_m.group(1).strip()) if nome_m else ""
         if not nome:
             continue
+        # ID univoco giocatore dall'href: .../squadre/<team>/<slug>/<ID>
+        id_m = re.search(r'/serie-a/squadre/[^"/]+/[^"/]+/(\d+)', b)
+        player_id = id_m.group(1) if id_m else ""
         team_m = re.search(r'class="player-team"[^>]*>\s*(.*?)\s*</td>', b, re.S)
         squadra = team_m.group(1).strip() if team_m else ""
         rc_m = re.search(r'player-role-classic.*?data-value="([^"]*)"', b, re.S)
@@ -65,7 +68,7 @@ def parse(raw: str) -> list[list[str]]:
         ruoli_m = re.findall(
             r'role role-mantra" data-value="([^"]*)"', m_block.group(1)) if m_block else []
         ruolo_mantra = "/".join(ruoli_m)
-        out.append([nome, squadra, ruolo_classic, ruolo_mantra,
+        out.append([player_id, nome, squadra, ruolo_classic, ruolo_mantra,
                     _col(b, "c_qi"), _col(b, "c_qa"), _col(b, "c_fvm"),
                     _col(b, "m_qi"), _col(b, "m_qa"), _col(b, "m_fvm")])
     return out
