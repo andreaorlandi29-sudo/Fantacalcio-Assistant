@@ -1,0 +1,10 @@
+# Segreti: mai committare
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

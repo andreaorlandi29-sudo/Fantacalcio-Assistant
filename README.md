@@ -44,6 +44,35 @@ Nessuna dipendenza esterna: bastano Python 3 e la libreria standard.
   Fantacalcio.it copre già quotazioni + storico. Si riprenderà solo se emergono dati
   specifici mancanti.
 
+## Bot Telegram (Claude API)
+
+Bot conversazionale: i messaggi Telegram vengono inoltrati a Claude via API.
+Claude ragiona con la strategia del `CLAUDE.md` (system prompt) e interroga i
+nostri dati tramite tre strumenti (`bot/tools.py`): classifica per reparto,
+ricerca filtrata, scheda/confronto giocatori.
+
+```
+bot/
+  tools.py         strumenti che Claude puo' chiamare sui dati
+  agent.py         loop Claude API (system prompt = CLAUDE.md + tool use)
+  telegram_bot.py  bot Telegram long-polling (solo testo)
+  dry_run.py       prova locale dell'agente senza Telegram
+```
+
+### Configurazione sicura dei segreti
+1. `cp .env.example .env`
+2. Riempi `TELEGRAM_BOT_TOKEN` (da @BotFather) e `ANTHROPIC_API_KEY`.
+3. `.env` e' escluso da git (`.gitignore`): non verra' mai committato. I segreti
+   sono letti come variabili d'ambiente, mai scritti nel codice.
+
+### Avvio
+```bash
+pip install -r requirements.txt
+set -a; . ./.env; set +a          # carica le variabili d'ambiente dal .env
+python3 -m bot.dry_run "i migliori 10 difensori"   # prova senza Telegram
+python3 -m bot.telegram_bot                         # avvia il bot Telegram
+```
+
 ### Chiave di unione
 
 I dataset si uniscono su `player_id`, l'ID univoco del giocatore su Fantacalcio.it
