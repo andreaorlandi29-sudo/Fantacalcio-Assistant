@@ -42,15 +42,17 @@ SOGLIA_PG = 5                                      # min presenze perche' una st
 ESP_SU_AMM = 3.0                                   # 1 espulsione pesa come 3 ammonizioni
 
 # preset di reparto: ruoli Mantra, pesi e metrica di "qualita'".
-#   w = (continuita, qualita, bonus_gol_assist, malus_cartellini)
+#   w = (continuita, qualita, bonus_gol_assist, malus_cartellini, forza_squadra)
 #   qualita = "mv" (media voto, RENDIMENTO PURO senza bonus) per por/dif,
 #             perche' sui difensori NON si cercano bonus offensivi;
 #           = "fm" (fantamedia, bonus inclusi) per cen/att, dove i bonus contano.
+#   forza_squadra pesa SOLO per i portieri: premia i portieri di squadre
+#   stabilmente in alta classifica (criterio "titolare di squadra medio-alta").
 REPARTI = {
-    "por": {"ruoli": ["por"],              "qualita": "mv", "w": (0.50, 0.45, 0.00, 0.10)},
-    "dif": {"ruoli": ["dc", "dd", "ds"],   "qualita": "mv", "w": (0.62, 0.20, 0.00, 0.25)},
-    "cen": {"ruoli": ["e", "m", "c", "t"], "qualita": "fm", "w": (0.30, 0.25, 0.45, 0.10)},
-    "att": {"ruoli": ["w", "a", "pc"],     "qualita": "fm", "w": (0.25, 0.30, 0.45, 0.05)},
+    "por": {"ruoli": ["por"],              "qualita": "mv", "w": (0.35, 0.30, 0.00, 0.10, 0.25)},
+    "dif": {"ruoli": ["dc", "dd", "ds"],   "qualita": "mv", "w": (0.62, 0.20, 0.00, 0.25, 0.00)},
+    "cen": {"ruoli": ["e", "m", "c", "t"], "qualita": "fm", "w": (0.30, 0.25, 0.45, 0.10, 0.00)},
+    "att": {"ruoli": ["w", "a", "pc"],     "qualita": "fm", "w": (0.25, 0.30, 0.45, 0.05, 0.00)},
 }
 NOMI_REPARTO = {"por": "PORTIERI", "dif": "DIFENSORI",
                 "cen": "CENTROCAMPISTI", "att": "ATTACCANTI"}
@@ -105,10 +107,14 @@ def metriche(r):
 
     g, a = _pesata(gol_valide), _pesata(ass_valide)
     bonus = ((g or 0) + (a or 0)) if (g is not None or a is not None) else None
+    # forza squadra: posizione media Serie A (piu' bassa = squadra piu' forte)
+    pos = _f(r.get("pos_media_squadra"))
     return {"cont": _f(r["continuita_pct"]),
             "mv": _pesata(mv_valide), "fm": _pesata(fm_valide),
             "bonus": bonus, "card": card_malus,
-            "amm_avg": amm_avg, "esp_avg": esp_avg}
+            "amm_avg": amm_avg, "esp_avg": esp_avg,
+            "pos_squadra": pos, "forza": (-pos if pos is not None else None),
+            "n_stagioni": n}
 
 
 def _norm(valori):
@@ -130,6 +136,11 @@ def motivazione(r, m, reparto):
     parti = [f"continuita' {cont}", f"{q_lbl} {q_txt}", f"trend {r['trend_fm']}"]
     if reparto in ("cen", "att") and m["bonus"] is not None:
         parti.append(f"bonus g+a ~{m['bonus']:.1f}/stag")
+    # forza squadra: solo per i portieri
+    if reparto == "por" and m["pos_squadra"] is not None:
+        p = m["pos_squadra"]
+        fascia = "alta" if p <= 8 else "media" if p <= 13 else "bassa"
+        parti.append(f"forza squadra: pos. media {p:.1f} (classifica {fascia})")
     # nota cartellini solo se davvero rilevante
     if m["amm_avg"] >= 5 or m["esp_avg"] > 0:
         nota = f"cartellini: ~{m['amm_avg']:.1f} amm/stag"
@@ -137,6 +148,11 @@ def motivazione(r, m, reparto):
             nota += f" + {m['esp_avg']:.1f} esp/stag"
         parti.append(nota)
     testo = ", ".join(parti)
+    # NOTA (non penalita') se lo storico copre meno di 3 stagioni
+    if m["n_stagioni"] == 1:
+        testo += "  [nota: dato su 1 sola stagione, da considerare con cautela]"
+    elif m["n_stagioni"] == 2:
+        testo += "  [nota: dato su 2 stagioni]"
     if r["cambio_squadra"] == "1":
         testo += "  [!] cambio squadra 2026/27: lo storico potrebbe non riflettere il rendimento"
     return testo
@@ -144,8 +160,8 @@ def motivazione(r, m, reparto):
 
 def classifica(rows, reparto=None, ruoli=None, top=15):
     ruoli_target = set(ruoli) if ruoli else set(REPARTI[reparto]["ruoli"])
-    w_cont, w_fm, w_bonus, w_card = (REPARTI[reparto]["w"] if reparto
-                                     else (0.4, 0.3, 0.3, 0.15))
+    w_cont, w_fm, w_bonus, w_card, w_forza = (REPARTI[reparto]["w"] if reparto
+                                              else (0.4, 0.3, 0.3, 0.15, 0.0))
 
     def is_target(r):
         return bool(set(r["ruolo_mantra"].split("/")) & ruoli_target)
@@ -160,10 +176,13 @@ def classifica(rows, reparto=None, ruoli=None, top=15):
     n_qual = _norm([m[qfield] for m in met])   # mv per por/dif, fm per cen/att
     n_bonus = _norm([m["bonus"] for m in met])
     n_card = _norm([m["card"] for m in met])
+    n_forza = _norm([m["forza"] for m in met])  # piu' alto = squadra piu' forte
 
     scored = []
-    for r, m, c, f, b, cm in zip(con_storico, met, n_cont, n_qual, n_bonus, n_card):
-        score = w_cont * c + w_fm * f + w_bonus * b - w_card * cm
+    for r, m, c, f, b, cm, fz in zip(con_storico, met, n_cont, n_qual,
+                                     n_bonus, n_card, n_forza):
+        score = (w_cont * c + w_fm * f + w_bonus * b
+                 - w_card * cm + w_forza * fz)
         score += {"crescente": 0.03, "calante": -0.03}.get(r["trend_fm"], 0.0)
         scored.append((score, r, m))
     scored.sort(key=lambda x: -x[0])

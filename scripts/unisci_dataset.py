@@ -36,6 +36,7 @@ from pathlib import Path
 DATA = Path(__file__).resolve().parent.parent / "data"
 QUOT = DATA / "quotazioni_fantacalcio.csv"
 STAT = DATA / "statistiche_seriea.csv"
+CLASS = DATA / "classifiche_squadre.csv"   # posizioni finali Serie A ultime 3 stagioni
 OUT = DATA / "dataset_unificato.csv"
 
 PARTITE_STAGIONE = 38          # Serie A a 20 squadre
@@ -69,6 +70,14 @@ def main() -> int:
     quot = leggi(QUOT)
     stat = leggi(STAT)
 
+    # forza squadra: posizione media Serie A ultime 3 stagioni (20 = non in A)
+    pos_media = {}
+    for c in leggi(CLASS):
+        p = [_f(c["pos_2023_24"]), _f(c["pos_2024_25"]), _f(c["pos_2025_26"])]
+        p = [x for x in p if x is not None]
+        if p:
+            pos_media[c["squadra"].strip().upper()] = round(sum(p) / len(p), 2)
+
     # stagioni presenti, dalla piu' recente alla piu' vecchia
     stagioni = sorted({r["stagione"] for r in stat}, reverse=True)
     idx = {(r["player_id"], r["stagione"]): r for r in stat if r["player_id"]}
@@ -80,7 +89,8 @@ def main() -> int:
                  "mantra_qa", "mantra_fvm", "classic_qa", "classic_fvm"]
     stat_cols = [f"{k}_{suf(st)}" for st in stagioni for k in STAT_FIELDS]
     calc_cols = (["nessuno_storico", "cambio_squadra", "fm_media_pesata", "trend_fm"]
-                 + [f"pres_pct_{suf(st)}" for st in stagioni] + ["continuita_pct"])
+                 + [f"pres_pct_{suf(st)}" for st in stagioni]
+                 + ["continuita_pct", "pos_media_squadra"])
     header = base_cols + stat_cols + calc_cols
 
     righe = []
@@ -123,6 +133,9 @@ def main() -> int:
             else:
                 row[f"pres_pct_{suf(st)}"] = ""
         row["continuita_pct"] = round(sum(pres_list) / len(pres_list)) if pres_list else ""
+
+        # forza squadra 2026/27 (posizione media Serie A ultime 3 stagioni)
+        row["pos_media_squadra"] = pos_media.get(q["squadra"].strip().upper(), "")
 
         # stagioni VALIDE (pg >= soglia) con fantamedia, dalla piu' recente
         valide = []  # (indice_stagione, fm)
