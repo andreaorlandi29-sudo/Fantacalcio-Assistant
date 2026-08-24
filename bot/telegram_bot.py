@@ -15,8 +15,13 @@ Usa long-polling (getUpdates): nessun webhook, funziona in locale.
 import os
 import sys
 import time
+from datetime import datetime
 
 import requests
+
+
+def _log(*a):
+    print(datetime.now().strftime("%H:%M:%S"), *a, flush=True)
 
 from . import agent
 
@@ -59,12 +64,16 @@ def _gestisci(token, msg):
                "• \"meglio Bastoni o Gatti?\"")
         return
 
+    _log(f"IN  chat={chat_id} user={user_id}: {testo!r}")
     storico = _storici.get(chat_id, [])
+    t0 = time.time()
     try:
         risposta = agent.rispondi(testo, storico=storico)
     except Exception as e:
+        _log(f"ERR {type(e).__name__}: {e}")
         _invia(token, chat_id, f"Errore nell'elaborazione: {type(e).__name__}: {e}")
         return
+    _log(f"OUT chat={chat_id} ({time.time()-t0:.1f}s, {len(risposta)} char)")
 
     # aggiorna storico (troncato)
     storico = storico + [{"role": "user", "content": testo},
