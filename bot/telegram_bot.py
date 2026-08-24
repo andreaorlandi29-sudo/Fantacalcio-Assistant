@@ -85,6 +85,7 @@ def _gestisci(token, msg):
     # feedback immediato: messaggio di attesa + indicatore "sta scrivendo"
     _invia(token, chat_id, "🧠 Ricevuto, sto ragionando sui dati…")
     _sta_scrivendo(token, chat_id)
+    _log("ACK messaggio di attesa + typing inviati")
     storico = _storici.get(chat_id, [])
     t0 = time.time()
     try:
