@@ -1,24 +1,34 @@
 #!/usr/bin/env python3
 """
-Unisce quotazioni (2026/27) e statistiche storiche in un unico dataset.
+Unisce quotazioni (2026/27) e statistiche storiche in un unico dataset,
+aggiungendo colonne calcolate utili alla valutazione.
 
 Chiave di join: player_id (univoco su Fantacalcio.it, stabile tra stagioni e
 indipendente da nome o cambio squadra).
 
-Base = i giocatori QUOTATI per l'asta (data/quotazioni_fantacalcio.csv): sono
-quelli che servono davvero. A ciascuno si affiancano, in colonne dedicate per
-stagione, le statistiche storiche (data/statistiche_seriea.csv). Un giocatore
-senza storico in Serie A (neopromosse, arrivi dall'estero, giovani) resta in
-tabella con le colonne stat vuote: e' un'informazione utile (possibili
-"scommesse").
+Base = i giocatori QUOTATI per l'asta (data/quotazioni_fantacalcio.csv). A
+ciascuno si affiancano, in colonne dedicate per stagione, le statistiche
+storiche (data/statistiche_seriea.csv), piu' le colonne calcolate qui sotto.
 
-Formato "largo": una riga per giocatore. Per ogni stagione le colonne:
-    pg_<st>  mv_<st>  fm_<st>  gol_<st>  ass_<st>  amm_<st>  gs_<st>  rp_<st>
+Colonne calcolate:
+  nessuno_storico     1 se il giocatore non ha alcuna presenza nelle stagioni
+                      considerate (rookie / arrivi dall'estero / neopromosse) -> filtrabile come "scommessa"
+  cambio_squadra      1 se la squadra 2026/27 (quotazioni) e' diversa da quella
+                      dell'ultima stagione con dati; "" se nessuno storico
+  fm_media_pesata     media della fantamedia sulle stagioni VALIDE, con pesi
+                      50% ultima / 30% penultima / 20% terzultima (rinormalizzati
+                      sulle stagioni effettivamente presenti)
+  trend_fm            crescente / stabile / calante / n_d  (confronto fantamedia
+                      tra prima e ultima stagione valida; soglia +/-0.3)
+  pres_pct_<st>       % presenze nella stagione (partite a voto / 38)
+  continuita_pct      media delle % presenze sulle stagioni con dati
 
-Uso:
-    python3 scripts/unisci_dataset.py
-Output:
-    data/dataset_unificato.csv
+NB: una stagione e' "valida" per media pesata e trend solo se il giocatore ha
+almeno SOGLIA_PG_VALIDA presenze: cosi' una fantamedia gonfiata da 1-2 partite
+non falsa il giudizio. Le presenze % invece si calcolano su tutte le stagioni.
+
+Uso:  python3 scripts/unisci_dataset.py
+Output:  data/dataset_unificato.csv
 """
 import csv
 from pathlib import Path
@@ -27,6 +37,10 @@ DATA = Path(__file__).resolve().parent.parent / "data"
 QUOT = DATA / "quotazioni_fantacalcio.csv"
 STAT = DATA / "statistiche_seriea.csv"
 OUT = DATA / "dataset_unificato.csv"
+
+PARTITE_STAGIONE = 38          # Serie A a 20 squadre
+SOGLIA_PG_VALIDA = 5           # min presenze perche' una stagione conti per fm/trend
+PESI = [0.5, 0.3, 0.2]         # ultima, penultima, terzultima stagione
 
 # statistica -> colonna nel file statistiche
 STAT_FIELDS = {
@@ -40,13 +54,22 @@ def leggi(path: Path) -> list[dict]:
         return list(csv.DictReader(f))
 
 
+def _f(v: str):
+    """Converte in float, o None se vuoto/non valido."""
+    if v is None or v.strip() == "":
+        return None
+    try:
+        return float(v)
+    except ValueError:
+        return None
+
+
 def main() -> int:
     quot = leggi(QUOT)
     stat = leggi(STAT)
 
-    # stagioni presenti, ordinate dalla piu' recente
+    # stagioni presenti, dalla piu' recente alla piu' vecchia
     stagioni = sorted({r["stagione"] for r in stat}, reverse=True)
-    # indice: (player_id, stagione) -> riga statistiche
     idx = {(r["player_id"], r["stagione"]): r for r in stat if r["player_id"]}
 
     def suf(st: str) -> str:
@@ -55,7 +78,9 @@ def main() -> int:
     base_cols = ["player_id", "nome", "squadra", "ruolo_mantra", "ruolo_classic",
                  "mantra_qa", "mantra_fvm", "classic_qa", "classic_fvm"]
     stat_cols = [f"{k}_{suf(st)}" for st in stagioni for k in STAT_FIELDS]
-    header = base_cols + stat_cols
+    calc_cols = (["nessuno_storico", "cambio_squadra", "fm_media_pesata", "trend_fm"]
+                 + [f"pres_pct_{suf(st)}" for st in stagioni] + ["continuita_pct"])
+    header = base_cols + stat_cols + calc_cols
 
     righe = []
     for q in quot:
@@ -65,10 +90,70 @@ def main() -> int:
             "mantra_qa": q["mantra_qa"], "mantra_fvm": q["mantra_fvm"],
             "classic_qa": q["classic_qa"], "classic_fvm": q["classic_fvm"],
         }
+        # statistiche grezze per stagione
+        stagioni_dati = {}  # st -> riga stat
         for st in stagioni:
             s = idx.get((q["player_id"], st))
+            if s:
+                stagioni_dati[st] = s
             for k, src in STAT_FIELDS.items():
                 row[f"{k}_{suf(st)}"] = s[src] if s else ""
+
+        # --- colonne calcolate ---
+        row["nessuno_storico"] = 0 if stagioni_dati else 1
+
+        # cambio squadra: confronto con l'ultima stagione (piu' recente) con dati
+        if stagioni_dati:
+            ultima = next(st for st in stagioni if st in stagioni_dati)
+            sq_prec = stagioni_dati[ultima]["squadra"].strip().upper()
+            row["cambio_squadra"] = 1 if q["squadra"].strip().upper() != sq_prec else 0
+        else:
+            row["cambio_squadra"] = ""
+
+        # presenze % per stagione + continuita media
+        pres_list = []
+        for st in stagioni:
+            s = stagioni_dati.get(st)
+            pg = _f(s["pg"]) if s else None
+            if pg is not None:
+                pct = round(100 * pg / PARTITE_STAGIONE)
+                row[f"pres_pct_{suf(st)}"] = pct
+                pres_list.append(pct)
+            else:
+                row[f"pres_pct_{suf(st)}"] = ""
+        row["continuita_pct"] = round(sum(pres_list) / len(pres_list)) if pres_list else ""
+
+        # stagioni VALIDE (pg >= soglia) con fantamedia, dalla piu' recente
+        valide = []  # (indice_stagione, fm)
+        for i, st in enumerate(stagioni):
+            s = stagioni_dati.get(st)
+            if not s:
+                continue
+            pg, fm = _f(s["pg"]), _f(s["fantamedia"])
+            if pg is not None and pg >= SOGLIA_PG_VALIDA and fm is not None:
+                valide.append((i, fm))
+
+        # media pesata (pesi rinormalizzati sulle valide)
+        if valide:
+            num = den = 0.0
+            for i, fm in valide:
+                w = PESI[i] if i < len(PESI) else PESI[-1]
+                num += w * fm
+                den += w
+            row["fm_media_pesata"] = round(num / den, 2)
+        else:
+            row["fm_media_pesata"] = ""
+
+        # trend: confronto fantamedia prima vs ultima stagione valida
+        if len(valide) >= 2:
+            fm_recente = valide[0][1]           # stagione piu' recente valida
+            fm_vecchia = valide[-1][1]          # stagione piu' vecchia valida
+            delta = fm_recente - fm_vecchia
+            row["trend_fm"] = ("crescente" if delta >= 0.3
+                               else "calante" if delta <= -0.3 else "stabile")
+        else:
+            row["trend_fm"] = "n_d"
+
         righe.append(row)
 
     with open(OUT, "w", newline="", encoding="utf-8") as f:
@@ -76,11 +161,11 @@ def main() -> int:
         w.writeheader()
         w.writerows(righe)
 
-    con_storico = sum(1 for q in righe if any(
-        q[f"pg_{suf(st)}"] for st in stagioni))
+    con_storico = sum(1 for r in righe if not r["nessuno_storico"])
+    cambi = sum(1 for r in righe if r["cambio_squadra"] == 1)
     print(f"OK: {len(righe)} giocatori quotati -> {OUT}")
-    print(f"  con almeno una stagione di storico: {con_storico}")
-    print(f"  senza storico (rookie/estero/neopromosse): {len(righe) - con_storico}")
+    print(f"  con storico Serie A: {con_storico}  |  senza storico (scommesse): {len(righe)-con_storico}")
+    print(f"  con cambio squadra 2026/27: {cambi}")
     print(f"  stagioni incluse: {', '.join(stagioni)}")
     return 0
 
