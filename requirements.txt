@@ -1,2 +1,4 @@
 anthropic>=0.40
 requests>=2.31
+flask>=3.0
+gunicorn>=21.2

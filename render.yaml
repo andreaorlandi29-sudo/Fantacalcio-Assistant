@@ -1,0 +1,23 @@
+# Blueprint Render: bot Fantacalcio come Web Service (piano free) in webhook.
+# NB: i Background Worker non sono disponibili nel piano free di Render, quindi
+# usiamo un Web Service. In webhook il servizio dorme quando inattivo e si
+# risveglia alla prima richiesta (primo messaggio dopo inattivita': ~1 min).
+services:
+  - type: web
+    name: fantacalcio-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn bot.webhook:app --workers 1 --threads 4 --timeout 120 --bind 0.0.0.0:$PORT
+    healthCheckPath: /
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false            # inserito a mano nella dashboard (segreto)
+      - key: ANTHROPIC_API_KEY
+        sync: false            # inserito a mano nella dashboard (segreto)
+      - key: WEBHOOK_SECRET
+        generateValue: true    # Render genera una stringa casuale
+      - key: CLAUDE_MODEL
+        value: claude-sonnet-5
+      - key: TELEGRAM_ALLOWED_USER_ID
+        value: "50029785"
