@@ -103,10 +103,14 @@ def main():
     offset = None
     while True:
         try:
-            # long-poll piu' corto (25s): il proxy resetta le connessioni lunghe
-            upd = _tg(token, "getUpdates", timeout=25, offset=offset)
+            # SHORT polling: chiamate brevi (timeout=0). In questo ambiente il
+            # proxy resetta le connessioni long-poll, mentre le chiamate brevi
+            # funzionano; una piccola pausa evita di martellare l'API.
+            upd = _tg(token, "getUpdates", timeout=0, offset=offset)
         except requests.RequestException as e:
             _log("rete getUpdates:", e); time.sleep(3); continue
+        if not upd.get("result"):
+            time.sleep(2)
         for u in upd.get("result", []):
             offset = u["update_id"] + 1
             if "message" in u:
