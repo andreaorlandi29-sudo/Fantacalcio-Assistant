@@ -31,10 +31,19 @@ _storici: dict[int, list] = {}
 _MAX_STORICO = 12  # messaggi tenuti per chat (6 scambi circa)
 
 
-def _tg(token, method, **params):
-    r = requests.post(API.format(token=token, method=method), json=params, timeout=70)
-    r.raise_for_status()
-    return r.json()
+def _tg(token, method, tentativi=4, **params):
+    """Chiama l'API Telegram con retry su errori di rete/proxy (connection reset)."""
+    ultimo = None
+    for i in range(tentativi):
+        try:
+            r = requests.post(API.format(token=token, method=method),
+                              json=params, timeout=75)
+            r.raise_for_status()
+            return r.json()
+        except requests.RequestException as e:
+            ultimo = e
+            time.sleep(min(2 ** i, 8))
+    raise ultimo
 
 
 def _invia(token, chat_id, testo):
@@ -94,13 +103,17 @@ def main():
     offset = None
     while True:
         try:
-            upd = _tg(token, "getUpdates", timeout=60, offset=offset)
+            # long-poll piu' corto (25s): il proxy resetta le connessioni lunghe
+            upd = _tg(token, "getUpdates", timeout=25, offset=offset)
         except requests.RequestException as e:
-            print("Rete:", e); time.sleep(3); continue
+            _log("rete getUpdates:", e); time.sleep(3); continue
         for u in upd.get("result", []):
             offset = u["update_id"] + 1
             if "message" in u:
-                _gestisci(token, u["message"])
+                try:
+                    _gestisci(token, u["message"])
+                except Exception as e:            # un errore su un messaggio non ferma il bot
+                    _log(f"errore gestione update {u['update_id']}: {type(e).__name__}: {e}")
 
 
 if __name__ == "__main__":
