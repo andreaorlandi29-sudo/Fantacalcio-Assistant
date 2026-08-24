@@ -45,7 +45,8 @@ PESI = [0.5, 0.3, 0.2]         # ultima, penultima, terzultima stagione
 # statistica -> colonna nel file statistiche
 STAT_FIELDS = {
     "pg": "pg", "mv": "mv", "fm": "fantamedia", "gol": "gol",
-    "ass": "assist", "amm": "ammonizioni", "gs": "gol_subiti", "rp": "rig_parati",
+    "ass": "assist", "amm": "ammonizioni", "esp": "espulsioni",
+    "gs": "gol_subiti", "rp": "rig_parati",
 }
 
 
