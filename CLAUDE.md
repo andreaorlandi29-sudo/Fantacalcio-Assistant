@@ -61,3 +61,33 @@
 - Dare priorità ai pareri di: Carmine Special, il Profeta, Re Costa
   (fonti citate come riferimento primario)
 - Integrare con dati oggettivi da FantaLab / Fantacalcio.it quando disponibili
+
+## Formato asta — IMPORTANTE
+- Asta a RIALZO (non a prezzo fisso): si parte da 1 credito per ogni giocatore
+  e si rilancia fino a quando nessuno rilancia più
+- Le quotazioni di Fantacalcio.it (Q.iniz, Q.att, FVM) sono valori di
+  RIFERIMENTO/mercato indicativi, NON il prezzo reale che verrà pagato
+- Il prezzo finale dipende dalla domanda: giocatori molto richiesti possono
+  chiudersi ben sopra la quotazione, giocatori meno desiderati anche
+  molto sotto (fino a 1 credito)
+- Quando l'assistente valuta un giocatore, deve distinguere tra:
+  - "quanto vale secondo i dati" (quotazione/FVM come riferimento di mercato)
+  - "quanto conviene spingersi a pagare TU" (il tuo prezzo massimo personale,
+    che può essere sopra o sotto la quotazione secondo la tua strategia)
+- Per le domande tipo "vale la pena arrivare a X crediti?", l'assistente deve
+  ragionare sul rapporto qualità/prezzo AL PREZZO CHE STO CHIEDENDO, non solo
+  ripetere la quotazione di listino
+
+## Tattica d'asta — timing degli interventi
+- Preferisco SEMPRE attendere che qualcun altro apra il rilancio su un
+  giocatore, prima di intervenire io
+- NON apro mai per primo un'offerta su un nome, nemmeno su una scommessa
+  che voglio fortemente
+- L'assistente, quando suggerisce una strategia per un giocatore, deve
+  tenerne conto: es. "aspetta che qualcuno lo nomini, poi rilancia fino a X"
+  piuttosto che "prendi l'iniziativa e nominalo per primo"
+- Eccezione implicita: se nessuno nomina mai un giocatore che voglio, prima
+  o poi tocca comunque a qualcuno "aprire" i giocatori rimasti nel listone
+  (regola normale del gioco) — questa preferenza riguarda il NON essere il
+  primo a lanciare un'offerta aggressiva su un nome, non l'impossibilità
+  strutturale di essere io a doverlo chiamare quando è il mio turno
