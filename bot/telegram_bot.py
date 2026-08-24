@@ -52,6 +52,14 @@ def _invia(token, chat_id, testo):
         _tg(token, "sendMessage", chat_id=chat_id, text=testo[i:i + 3900])
 
 
+def _sta_scrivendo(token, chat_id):
+    """Mostra l'indicatore 'sta scrivendo...' (dura ~5s lato Telegram)."""
+    try:
+        _tg(token, "sendChatAction", tentativi=1, chat_id=chat_id, action="typing")
+    except Exception:
+        pass  # puramente estetico: non deve mai bloccare
+
+
 def _gestisci(token, msg):
     chat_id = msg["chat"]["id"]
     user_id = msg.get("from", {}).get("id")
@@ -74,6 +82,9 @@ def _gestisci(token, msg):
         return
 
     _log(f"IN  chat={chat_id} user={user_id}: {testo!r}")
+    # feedback immediato: messaggio di attesa + indicatore "sta scrivendo"
+    _invia(token, chat_id, "🧠 Ricevuto, sto ragionando sui dati…")
+    _sta_scrivendo(token, chat_id)
     storico = _storici.get(chat_id, [])
     t0 = time.time()
     try:
