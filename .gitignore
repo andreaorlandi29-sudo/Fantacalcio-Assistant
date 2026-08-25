@@ -11,3 +11,6 @@ venv/
 
 # file Excel generati dal report giornaliero
 lista_giocatori_*.xlsx
+
+# JSON generato per il repo pubblico dei dati (non va nel repo privato)
+build/
