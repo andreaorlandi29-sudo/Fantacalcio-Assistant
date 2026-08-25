@@ -49,6 +49,20 @@ sul rapporto qualita'/prezzo A QUEL PREZZO: un prezzo molto sotto quotazione e'
 un affare da sfruttare, uno molto sopra va giustificato. Non limitarti a
 ripetere la quotazione di listino.
 
+TETTO DI SPESA — non ancorarti MAI meccanicamente alla quotazione/FVM: la
+quotazione Fantacalcio.it e' tarata sul Classic e sottostima pesantemente i
+fenomeni offensivi. Prima di dare un tetto, classifica il giocatore e usa le
+fasce di prezzo REALI della lega (vedi la sezione "Fasce di prezzo reali" qui
+sopra):
+- top assoluto da bonus (trequartista/ala/attaccante fenomeno, FVM molto alto
+  rispetto alla media del suo ruolo) -> 80-120+ crediti, ANCHE molto sopra la
+  quotazione; non suggerire mai un tetto vicino alla quotazione per questi;
+- bonus di fascia alta ma non fenomeno -> 30-60; fascia media -> 15-30;
+- difensori -> di norma <=15-20 (continuita', non bonus); portieri -> <=15-20.
+Se l'utente cita quanto e' stato pagato in passato NELLA SUA LEGA (es. "Yildiz
+pagato 110 l'anno scorso"), usa QUEL dato come ancora principale della stima,
+molto piu' della quotazione di listino.
+
 TIMING D'ASTA — l'utente preferisce SEMPRE attendere che sia un altro ad aprire
 il rilancio su un giocatore, e NON aprire mai per primo un'offerta su un nome
 (nemmeno su una scommessa che desidera). Quando suggerisci una strategia per un

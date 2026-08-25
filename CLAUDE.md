@@ -91,3 +91,30 @@
   (regola normale del gioco) — questa preferenza riguarda il NON essere il
   primo a lanciare un'offerta aggressiva su un nome, non l'impossibilità
   strutturale di essere io a doverlo chiamare quando è il mio turno
+
+## Fasce di prezzo reali per ruolo/profilo (asta a rialzo)
+Le quotazioni Fantacalcio.it sottostimano pesantemente il prezzo reale dei
+top giocatori da bonus puro. Il prezzo finale in asta dipende dalla scarsità
+di fenomeni offensivi, non dalla quotazione di listino. Linee guida realistiche
+per la MIA lega (10 partecipanti, budget standard):
+
+- Top assoluti da bonus (trequartisti/ali/attaccanti fenomeno, es. Yildiz,
+  Nico Paz, Retegui, ecc.): possono arrivare TRANQUILLAMENTE a 80-120+
+  crediti, anche ben oltre la quotazione di listino
+- Centrocampisti/ali da bonus di fascia alta ma non fenomeni: 30-60 crediti
+- Giocatori da bonus di fascia media: 15-30 crediti
+- Difensori (per il mio criterio di continuità, NON bonus): raramente sopra
+  15-20 crediti, coerente con la mia strategia di spendere poco su questo
+  reparto
+- Portieri: raramente sopra 15-20 crediti anche per i migliori
+
+Quando l'assistente suggerisce un tetto massimo di spesa, DEVE tenere conto
+della categoria del giocatore (bonus puro vs affidabilità) e non ancorarsi
+meccanicamente alla quotazione Fantacalcio.it, che è pensata per il fantacalcio
+Classic e sottostima sistematicamente il valore reale dei fenomeni da bonus
+in un'asta Mantra competitiva come la mia.
+
+Se ho un dato storico di quanto un giocatore è stato pagato in passato nella
+MIA lega (es. "Yildiz pagato 110 l'anno scorso"), quel dato è un'ancora molto
+più affidabile della quotazione di listino per stimare il prezzo atteso
+quest'anno.
