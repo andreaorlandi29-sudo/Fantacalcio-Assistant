@@ -37,6 +37,7 @@ DATA = Path(__file__).resolve().parent.parent / "data"
 QUOT = DATA / "quotazioni_fantacalcio.csv"
 STAT = DATA / "statistiche_seriea.csv"
 CLASS = DATA / "classifiche_squadre.csv"   # posizioni finali Serie A ultime 3 stagioni
+INFORTUNI = DATA / "infortuni_seriea.csv"  # indisponibili (aggiornato di frequente)
 OUT = DATA / "dataset_unificato.csv"
 
 PARTITE_STAGIONE = 38          # Serie A a 20 squadre
@@ -78,6 +79,21 @@ def main() -> int:
         if p:
             pos_media[c["squadra"].strip().upper()] = round(sum(p) / len(p), 2)
 
+    # infortuni: indice per (nome, codice squadra) + fallback per solo nome
+    inf_idx, inf_per_nome = {}, {}
+    if INFORTUNI.exists():
+        for r in leggi(INFORTUNI):
+            n = r["nome"].strip().lower()
+            inf_idx[(n, r["squadra"].strip().upper())] = r
+            inf_per_nome.setdefault(n, []).append(r)
+
+    def infortunio(nome, squadra):
+        n = nome.strip().lower()
+        r = inf_idx.get((n, squadra.strip().upper()))
+        if not r and len(inf_per_nome.get(n, [])) == 1:
+            r = inf_per_nome[n][0]  # match per solo nome se univoco
+        return r
+
     # stagioni presenti, dalla piu' recente alla piu' vecchia
     stagioni = sorted({r["stagione"] for r in stat}, reverse=True)
     idx = {(r["player_id"], r["stagione"]): r for r in stat if r["player_id"]}
@@ -90,7 +106,8 @@ def main() -> int:
     stat_cols = [f"{k}_{suf(st)}" for st in stagioni for k in STAT_FIELDS]
     calc_cols = (["nessuno_storico", "cambio_squadra", "fm_media_pesata", "trend_fm"]
                  + [f"pres_pct_{suf(st)}" for st in stagioni]
-                 + ["continuita_pct", "pos_media_squadra"])
+                 + ["continuita_pct", "pos_media_squadra",
+                    "stato_infortunio", "dettaglio_infortunio", "infortunio_aggiornato_il"])
     header = base_cols + stat_cols + calc_cols
 
     righe = []
@@ -136,6 +153,12 @@ def main() -> int:
 
         # forza squadra 2026/27 (posizione media Serie A ultime 3 stagioni)
         row["pos_media_squadra"] = pos_media.get(q["squadra"].strip().upper(), "")
+
+        # infortunio (vuoto se il giocatore non e' tra gli indisponibili)
+        inf = infortunio(q["nome"], q["squadra"])
+        row["stato_infortunio"] = inf["stato_infortunio"] if inf else ""
+        row["dettaglio_infortunio"] = inf["dettaglio_infortunio"] if inf else ""
+        row["infortunio_aggiornato_il"] = inf["aggiornato_il"] if inf else ""
 
         # stagioni VALIDE (pg >= soglia) con fantamedia, dalla piu' recente
         valide = []  # (indice_stagione, fm)

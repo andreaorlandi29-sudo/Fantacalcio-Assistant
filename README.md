@@ -11,6 +11,7 @@ Pipeline di raccolta dati (Serie A, da Fantacalcio.it — solo pagine **pubblich
 |--------|---------|--------|
 | `scripts/estrai_quotazioni.py` | Quotazioni asta 2026/27 (Classic + Mantra, ruoli multiruolo) | `data/quotazioni_fantacalcio.csv` |
 | `scripts/estrai_statistiche.py` | Statistiche storiche multi-stagione (PV, MV, fantamedia, gol, assist…) | `data/statistiche_seriea.csv` |
+| `scripts/estrai_infortuni.py` | Infortunati/indisponibili (testo narrativo + data aggiornamento) | `data/infortuni_seriea.csv` |
 | `scripts/unisci_dataset.py` | Unisce quotazioni + storico per `player_id`, aggiunge colonne calcolate e forza squadra | `data/dataset_unificato.csv` |
 | `scripts/ranking_reparto.py` | Classifica per reparto (por/dif/cen/att) secondo il CLAUDE.md | stampa a schermo / `--csv` |
 

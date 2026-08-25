@@ -18,12 +18,14 @@ import ranking_reparto as rr  # noqa: E402  (usa DATASET, REPARTI, classifica, m
 from . import rosa_store as store  # noqa: E402  (stato rosa persistente)
 
 DATASET = REPO / "data" / "dataset_unificato.csv"
+INFORTUNI = REPO / "data" / "infortuni_seriea.csv"
 
 # campi "sintetici" restituiti nelle ricerche (compatti, per non riempire il contesto)
 CAMPI_SINTESI = [
     "nome", "squadra", "ruolo_mantra", "mantra_qa", "mantra_fvm",
     "continuita_pct", "fm_media_pesata", "trend_fm",
     "nessuno_storico", "cambio_squadra", "pos_media_squadra",
+    "stato_infortunio",
 ]
 
 
@@ -121,8 +123,50 @@ def dettaglio_giocatore(nome: str) -> dict:
     return {"trovati": len(match), "giocatori": match[:6]}
 
 
+# ---------------------------------------------------------------- infortuni
+def verifica_infortuni(squadra=None, ruoli=None, nomi=None) -> dict:
+    """Elenca gli indisponibili (infortunati/da valutare) da infortuni_seriea.csv.
+
+    Filtri opzionali: squadra (sigla o nome), ruoli (preset/lista Mantra),
+    nomi (lista di nomi anche parziali). Restituisce sempre 'aggiornato_il'.
+    """
+    if not INFORTUNI.exists():
+        return {"disponibile": False,
+                "messaggio": "Dati infortuni non ancora presenti."}
+    with open(INFORTUNI, encoding="utf-8") as f:
+        inf = list(csv.DictReader(f))
+    if not inf:
+        return {"totale": 0, "infortunati": [], "aggiornato_il": None}
+
+    aggiornato = max((r.get("aggiornato_il", "") for r in inf), default="")
+    # ruolo dal dataset (l'elenco infortuni non ha il ruolo)
+    ruolo_per_nome = {}
+    if ruoli:
+        for r in _carica():
+            ruolo_per_nome[(r["nome"].lower(), r["squadra"].upper())] = r["ruolo_mantra"]
+    target = _ruoli_da_reparto(ruoli) if ruoli else None
+
+    res = []
+    for r in inf:
+        if squadra:
+            s = squadra.strip().upper()
+            if s not in (r["squadra"].upper(), r["squadra_nome"].upper()):
+                continue
+        if nomi:
+            if not any(n.strip().lower() in r["nome"].lower() for n in nomi):
+                continue
+        rm = ruolo_per_nome.get((r["nome"].lower(), r["squadra"].upper()), "")
+        if target and not (set(rm.split("/")) & target):
+            continue
+        res.append({"nome": r["nome"], "squadra": r["squadra"] or r["squadra_nome"],
+                    "ruolo_mantra": rm, "dettaglio": r["dettaglio_infortunio"],
+                    "aggiornato_il": r["aggiornato_il"]})
+    return {"totale": len(res), "aggiornato_il": aggiornato, "infortunati": res}
+
+
 # ---------------------------------------------------------------- registro
 FUNZIONI = {
+    "verifica_infortuni": verifica_infortuni,
     "classifica_reparto": classifica_reparto,
     "cerca_giocatori": cerca_giocatori,
     "dettaglio_giocatore": dettaglio_giocatore,
@@ -196,6 +240,25 @@ TOOLS = [
                 "nome": {"type": "string", "description": "anche parziale, es. 'Martinez'"},
             },
             "required": ["nome"],
+        },
+    },
+    {
+        "name": "verifica_infortuni",
+        "description": (
+            "Elenca gli indisponibili di Serie A (infortunati / da valutare) con il "
+            "dettaglio testuale del problema e del rientro previsto COSI' COM'E' sul "
+            "sito, piu' la data di aggiornamento del dato. Filtri opzionali: squadra "
+            "(sigla o nome), ruoli (preset por/dif/cen/att o lista ruoli Mantra), nomi. "
+            "Il dato cambia in fretta: riporta SEMPRE la data di aggiornamento."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "squadra": {"type": "string", "description": "sigla (INT) o nome (Inter)"},
+                "ruoli": {"type": "string", "description": "preset reparto o ruoli 'dc,dd'"},
+                "nomi": {"type": "array", "items": {"type": "string"},
+                         "description": "nomi (anche parziali) da controllare"},
+            },
         },
     },
     {

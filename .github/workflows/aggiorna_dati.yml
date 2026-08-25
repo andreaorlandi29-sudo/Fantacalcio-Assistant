@@ -43,13 +43,16 @@ jobs:
       - name: 2) Estrai statistiche (3 stagioni)
         run: python3 scripts/estrai_statistiche.py
 
-      - name: 3) Unisci dataset
+      - name: 3) Estrai infortuni/indisponibili
+        run: python3 scripts/estrai_infortuni.py
+
+      - name: 4) Unisci dataset
         run: python3 scripts/unisci_dataset.py
 
       # Nota: data/classifiche_squadre.csv e' un file statico (classifiche finali
       # da Wikipedia), non generato da uno script: non va rigenerato qui.
 
-      - name: 4) Commit & push se i dati sono cambiati
+      - name: 5) Commit & push se i dati sono cambiati
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
