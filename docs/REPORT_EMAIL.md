@@ -4,7 +4,7 @@ Ogni mattina il workflow `Aggiorna dati Fantacalcio` genera un file Excel
 filtrabile con tutti i giocatori e lo invia via email come allegato.
 
 - Generazione: `scripts/genera_lista.py` → `lista_giocatori_<data>.xlsx`
-  - Colonne: Calciatore, Ruolo/i, Squadra, Valutazione (1-20), Situazione infortuni
+  - Colonne: Calciatore, Ruolo/i, Squadra, Quotazione (Q.att Mantra), Valutazione (1-20), Situazione infortuni
   - Autofilter attivo + intestazione congelata
   - Valutazione 1-20 normalizzata **per reparto** riusando `ranking_reparto.py`;
     le scommesse (senza storico) hanno stima prudente e prefisso 🎲; gli

@@ -140,9 +140,11 @@ def costruisci_righe() -> list[dict]:
                 inf = "⚠️ " + p.get("dettaglio_infortunio", "")
                 if p.get("infortunio_aggiornato_il"):
                     inf += f"  (agg. {p['infortunio_aggiornato_il']})"
+            q = _f(p["mantra_qa"])
             righe.append({"_gruppo": g, "Calciatore": nome, "Ruolo/i": ruoli,
-                          "Squadra": p["squadra"], "Valutazione": v,
-                          "Situazione infortuni": inf})
+                          "Squadra": p["squadra"],
+                          "Quotazione": int(q) if q is not None else p["mantra_qa"],
+                          "Valutazione": v, "Situazione infortuni": inf})
     # ordina: per reparto (ordine fisso), poi valutazione desc, poi nome
     righe.sort(key=lambda r: (ORDINE.index(r["_gruppo"]), -r["Valutazione"], r["Calciatore"]))
     return righe
@@ -152,7 +154,8 @@ def scrivi_xlsx(righe: list[dict], out_path: Path) -> Path:
     from openpyxl import Workbook
     from openpyxl.styles import Font, Alignment, PatternFill
 
-    colonne = ["Calciatore", "Ruolo/i", "Squadra", "Valutazione", "Situazione infortuni"]
+    colonne = ["Calciatore", "Ruolo/i", "Squadra", "Quotazione", "Valutazione",
+               "Situazione infortuni"]
     wb = Workbook()
     ws = wb.active
     ws.title = "Giocatori"
@@ -168,17 +171,18 @@ def scrivi_xlsx(righe: list[dict], out_path: Path) -> Path:
     for r in righe:
         ws.append([r[c] for c in colonne])
 
-    # larghezze + wrap sulla colonna infortuni
-    larghezze = {"A": 22, "B": 12, "C": 9, "D": 12, "E": 90}
+    # larghezze + wrap sulla colonna infortuni (F); centro Quotazione (D) e Valutazione (E)
+    larghezze = {"A": 22, "B": 12, "C": 9, "D": 12, "E": 12, "F": 90}
     for col, w in larghezze.items():
         ws.column_dimensions[col].width = w
-    for row in ws.iter_rows(min_row=2, min_col=5, max_col=5):
+    for row in ws.iter_rows(min_row=2, min_col=6, max_col=6):
         row[0].alignment = Alignment(wrap_text=True, vertical="top")
-    for row in ws.iter_rows(min_row=2, min_col=4, max_col=4):
-        row[0].alignment = Alignment(horizontal="center")
+    for row in ws.iter_rows(min_row=2, min_col=4, max_col=5):
+        for cell in row:
+            cell.alignment = Alignment(horizontal="center")
 
     ws.freeze_panes = "A2"                         # intestazione congelata
-    ws.auto_filter.ref = f"A1:E{ws.max_row}"       # filtro automatico
+    ws.auto_filter.ref = f"A1:F{ws.max_row}"       # filtro automatico
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(out_path)
