@@ -118,3 +118,36 @@ Se ho un dato storico di quanto un giocatore è stato pagato in passato nella
 MIA lega (es. "Yildiz pagato 110 l'anno scorso"), quel dato è un'ancora molto
 più affidabile della quotazione di listino per stimare il prezzo atteso
 quest'anno.
+
+## Composizione rosa target (modulo: difesa a 3)
+Budget totale lega: 500 crediti
+
+Target di rosa per reparto (min-max):
+- Portieri: 3 (titolare + riserve, preferibilmente stessa squadra del titolare)
+- Difensori (Dc, Dd, Ds, B): 6-7
+- Centrocampisti/mediani (M, C): 5-6
+- Esterni/esterni offensivi (E, W): 4-5
+- Trequartisti/Attaccanti/Punte (T, A, Pc): 3-4
+
+## Preferenze multiruolo per reparto
+- Difensori: privilegiare doppio ruolo che copre il centro (Dc/B) o doppio
+  ruolo che copre anche una fascia (Dd/Dc o Ds/Dc). Eccezione: Dd/E e Ds/E
+  sono ottimi anche per coprire il centrocampo, quindi molto graditi
+- Centrocampisti: privilegiare doppio ruolo M/C. Ricorda: schiero sempre
+  almeno un mediano (M) e un centrocampista (C)
+- Esterni: privilegiare doppio ruolo e chi garantisce bonus
+- Trequartisti/Attaccanti: NON amo il trequartista puro — lo prendo solo se
+  è un'occasione molto forte o se ha doppio ruolo (es. T/A, T/C)
+- Regola generale trasversale: a parità di valore, privilegio sempre doppi
+  e tripli ruoli su tutti i reparti
+
+## Gestione rosa durante l'asta
+- Man mano che acquisto giocatori, li comunico al bot (nome + crediti spesi)
+- Il bot deve registrarli, calcolare crediti residui, e monitorare quanti
+  slot restano liberi per reparto rispetto ai target sopra
+- Quando chiedo consigli su un acquisto, il bot deve tenere conto di:
+  - crediti residui reali (non teorici)
+  - slot ancora scoperti per reparto (se un reparto è già pieno, sconsigliare
+    ulteriori acquisti lì anche se il giocatore è forte)
+  - urgenza: se restano pochi slot per un reparto ancora vuoto e il budget
+    residuo scarseggia, segnalarlo chiaramente

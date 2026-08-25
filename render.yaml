@@ -22,3 +22,7 @@ services:
         value: claude-sonnet-5
       - key: TELEGRAM_ALLOWED_USER_ID
         value: "50029785"
+      # Connection string del Render Key Value (rosa persistente). Da inserire
+      # a mano nella dashboard: internal connection string del Key Value creato.
+      - key: REDIS_URL
+        sync: false

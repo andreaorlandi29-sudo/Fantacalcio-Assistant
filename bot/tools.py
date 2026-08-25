@@ -15,6 +15,8 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 import ranking_reparto as rr  # noqa: E402  (usa DATASET, REPARTI, classifica, metriche)
 
+from . import rosa_store as store  # noqa: E402  (stato rosa persistente)
+
 DATASET = REPO / "data" / "dataset_unificato.csv"
 
 # campi "sintetici" restituiti nelle ricerche (compatti, per non riempire il contesto)
@@ -124,6 +126,13 @@ FUNZIONI = {
     "classifica_reparto": classifica_reparto,
     "cerca_giocatori": cerca_giocatori,
     "dettaglio_giocatore": dettaglio_giocatore,
+    # --- gestione rosa live (storage persistente) ---
+    "registra_acquisto": lambda nome, crediti: store.registra(nome, crediti),
+    "stato_rosa": lambda: store.stato_rosa(),
+    "correggi_acquisto": lambda nome=None, nuovo_prezzo=None, nuovo_nome=None:
+        store.correggi(nome=nome, nuovo_prezzo=nuovo_prezzo, nuovo_nome=nuovo_nome),
+    "annulla_ultimo_acquisto": lambda: store.annulla_ultimo(),
+    "reset_rosa": lambda: store.reset(),
 }
 
 # schemi JSON esposti a Claude
@@ -188,6 +197,65 @@ TOOLS = [
             },
             "required": ["nome"],
         },
+    },
+    {
+        "name": "registra_acquisto",
+        "description": (
+            "Registra nella rosa (storage persistente) un giocatore appena comprato "
+            "all'asta: nome + crediti spesi. Ruolo/squadra vengono recuperati dal "
+            "dataset. Se il nome e' ambiguo, restituisce 'conferma_necessaria' con i "
+            "candidati: in tal caso NON e' stato registrato, chiedi all'utente quale. "
+            "Restituisce lo stato rosa aggiornato: riportane un breve riepilogo."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "nome": {"type": "string", "description": "nome del giocatore comprato"},
+                "crediti": {"type": "number", "description": "crediti spesi"},
+            },
+            "required": ["nome", "crediti"],
+        },
+    },
+    {
+        "name": "stato_rosa",
+        "description": (
+            "Stato attuale della rosa: budget totale, crediti spesi e residui, e per "
+            "ogni reparto quanti giocatori presi vs target (min/max), quali mancano e "
+            "quali reparti sono gia' pieni. Usalo quando l'utente chiede lo stato rosa "
+            "e SEMPRE prima di consigliare un acquisto."
+        ),
+        "input_schema": {"type": "object", "properties": {}},
+    },
+    {
+        "name": "correggi_acquisto",
+        "description": (
+            "Corregge un acquisto gia' registrato. Senza 'nome' corregge l'ULTIMO "
+            "acquisto; con 'nome' corregge l'ultimo acquisto di quel giocatore. Puoi "
+            "cambiare il prezzo (nuovo_prezzo) e/o il giocatore (nuovo_nome). Es.: "
+            "'Yildiz l'ho pagato 95 non 105' -> nome='Yildiz', nuovo_prezzo=95."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "nome": {"type": "string", "description": "giocatore da correggere (opz.)"},
+                "nuovo_prezzo": {"type": "number", "description": "prezzo corretto (opz.)"},
+                "nuovo_nome": {"type": "string", "description": "giocatore corretto (opz.)"},
+            },
+        },
+    },
+    {
+        "name": "annulla_ultimo_acquisto",
+        "description": "Rimuove l'ultimo acquisto registrato (in caso di errore).",
+        "input_schema": {"type": "object", "properties": {}},
+    },
+    {
+        "name": "reset_rosa",
+        "description": (
+            "AZZERA completamente la rosa (tutti gli acquisti, budget di nuovo pieno). "
+            "Operazione distruttiva: chiamala SOLO se l'utente chiede esplicitamente di "
+            "resettare/svuotare la rosa, e conferma prima di farlo."
+        ),
+        "input_schema": {"type": "object", "properties": {}},
     },
 ]
 
