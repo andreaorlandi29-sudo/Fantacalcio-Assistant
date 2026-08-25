@@ -1,13 +1,14 @@
 name: Aggiorna dati Fantacalcio
 
-# Aggiorna quotazioni + statistiche + dataset unificato una volta al giorno,
-# e committa su main solo se qualcosa e' cambiato.
+# Aggiorna quotazioni + statistiche + infortuni + dataset unificato, committa su
+# main se qualcosa e' cambiato, e infine genera e invia via email la lista Excel.
 
 on:
   schedule:
-    # cron in UTC. 07:00 UTC = 09:00 in Italia d'estate (CEST) / 08:00 d'inverno (CET).
-    # GitHub non gestisce l'ora legale: in inverno partira' alle 08:00 italiane.
-    - cron: "0 7 * * *"
+    # cron in UTC. 08:00 UTC = 10:00 in Italia d'estate (CEST) / 09:00 d'inverno (CET).
+    # GitHub non gestisce l'ora legale: da fine ottobre l'orario italiano sara' 09:00
+    # (per riavere le 10:00 in inverno, cambiare in "0 9 * * *").
+    - cron: "0 8 * * *"
   workflow_dispatch: {}   # avvio manuale dalla tab Actions (per testarlo subito)
 
 # serve per far pushare il commit automatico con il token integrato GITHUB_TOKEN
@@ -31,7 +32,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      # Nessuna dipendenza esterna: gli script usano solo la libreria standard.
+
+      # Gli script di estrazione usano solo la stdlib; per l'Excel serve openpyxl.
+      - name: Installa dipendenze (openpyxl)
+        run: pip install openpyxl
 
       # Gli step girano in ordine. Se uno fallisce (es. il sito cambia
       # struttura o non risponde), il job si ferma qui e risulta FALLITO
@@ -64,3 +68,13 @@ jobs:
             git commit -m "Aggiornamento automatico dati ($(date -u +%Y-%m-%d))"
             git push
           fi
+
+      # Genera la lista Excel e la invia via email (sempre, anche se i dati non
+      # sono cambiati). Se manca un secret o l'invio fallisce, il job va in
+      # errore -> notifica GitHub. Usa il dataset appena rigenerato su disco.
+      - name: 6) Genera e invia la lista via email
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python3 scripts/invia_report.py

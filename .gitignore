@@ -8,3 +8,6 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# file Excel generati dal report giornaliero
+lista_giocatori_*.xlsx

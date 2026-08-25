@@ -14,6 +14,8 @@ Pipeline di raccolta dati (Serie A, da Fantacalcio.it — solo pagine **pubblich
 | `scripts/estrai_infortuni.py` | Infortunati/indisponibili (testo narrativo + data aggiornamento) | `data/infortuni_seriea.csv` |
 | `scripts/unisci_dataset.py` | Unisce quotazioni + storico per `player_id`, aggiunge colonne calcolate e forza squadra | `data/dataset_unificato.csv` |
 | `scripts/ranking_reparto.py` | Classifica per reparto (por/dif/cen/att) secondo il CLAUDE.md | stampa a schermo / `--csv` |
+| `scripts/genera_lista.py` | Lista Excel filtrabile (valutazione 1-20 per reparto, infortuni) | `lista_giocatori_<data>.xlsx` |
+| `scripts/invia_report.py` | Genera la lista e la invia via email (Gmail SMTP) — vedi `docs/REPORT_EMAIL.md` | email con allegato |
 
 Dato statico di supporto: `data/classifiche_squadre.csv` = posizioni finali di
 Serie A delle ultime 3 stagioni (fonte: Wikipedia). Usato per la colonna

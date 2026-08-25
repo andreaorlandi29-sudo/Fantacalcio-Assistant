@@ -3,3 +3,4 @@ requests>=2.31
 flask>=3.0
 gunicorn>=21.2
 redis>=5.0
+openpyxl>=3.1
