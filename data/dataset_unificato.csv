@@ -13,7 +13,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 5951,Kolo Muani,JUV,pc,a,25,211,25,211,,,,,,,,,,16,6.22,7.78,8,1,0,0,0,0,,,,,,,,,,0,0,7.78,n_d,,42,,42,4.33,,,
 2423,Pulisic,MIL,t/a,c,22,160,24,160,27,6.15,7.07,8,4,0,0,0,0,34,6.38,7.49,11,8,1,0,0,0,36,6.33,7.5,12,7,2,0,0,0,0,0,7.28,calante,71,89,95,85,5.0,,,
 2379,Rabiot,MIL,c/t,c,23,145,23,145,29,6.33,6.98,6,4,4,1,0,0,,,,,,,,,,31,6.08,6.5,5,2,8,0,0,0,0,0,6.84,crescente,76,,82,79,5.0,,,
-6434,Yildiz,JUV,a,a,23,150,22,150,35,6.39,7.3,10,6,2,0,0,0,34,6.34,7.01,7,4,2,1,0,0,21,6.05,6.29,2,0,3,0,0,0,0,0,7.01,crescente,92,89,55,79,4.33,indisponibile,"l'attaccante turco lamenta un problema al piede sinistro e potrebbe essere necessaria l'operazione chirurgica. Ulteriori valutazioni mediche verranno fatte nelle prossime ore, ma c'è il rischio di uno stop di almeno due mesi. Da valutare.",2026-08-25
+6434,Yildiz,JUV,a,a,23,150,22,150,35,6.39,7.3,10,6,2,0,0,0,34,6.34,7.01,7,4,2,1,0,0,21,6.05,6.29,2,0,3,0,0,0,0,0,7.01,crescente,92,89,55,79,4.33,indisponibile,"l'attaccante turco lamenta un problema al piede sinistro e potrebbe essere necessaria l'operazione chirurgica. Ulteriori valutazioni mediche verranno fatte nelle prossime ore, ma c'è il rischio di uno stop di almeno due mesi. Da valutare.",2026-08-26
 7017,Douvikas,COM,pc,a,21,170,21,170,36,6.18,7.38,14,1,0,0,0,0,12,6.21,6.75,2,1,1,0,0,0,,,,,,,,,,0,0,7.14,crescente,95,32,,64,11.33,,,
 6435,Krstovic,ATA,pc,a,18,100,19,100,32,6.16,7.19,10,5,4,0,0,0,37,6.05,6.92,11,5,6,0,0,0,33,5.91,6.30,7,1,4,1,0,0,0,0,6.93,crescente,84,97,87,89,4.67,,,
 2137,Scamacca,ATA,pc,a,18,123,19,123,22,6.18,7.55,10,1,2,0,0,0,0,0.0,0.0,0,0,0,0,0,0,28,6.41,7.89,12,6,1,0,0,0,0,0,7.65,calante,58,0,74,44,4.67,,,
@@ -21,10 +21,10 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 5637,Davis K.,UDI,pc,a,19,109,19,109,30,6.32,7.37,10,4,5,0,0,0,16,6.0,6.38,2,1,2,0,0,0,5,6.2,6.6,1,0,2,0,0,0,0,0,6.92,crescente,79,42,13,45,12.33,,,
 7556,Mora,ROM,t,c,18,95,19,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,4.67,,,
 5559,Da Cunha,COM,c/t,c,18,87,18,87,35,6.34,6.91,6,4,4,0,0,0,35,6.1,6.36,3,2,4,0,0,0,,,,,,,,,,0,0,6.7,crescente,92,92,,92,11.33,,,
-4510,Leao,MIL,a,a,19,75,18,75,28,5.88,6.86,9,3,5,0,0,0,34,6.19,7.06,8,8,5,0,0,0,33,6.39,7.41,9,9,5,0,0,0,0,0,7.03,calante,74,89,87,83,5.0,indisponibile,"L'attaccante portoghese non al meglio per noie fisiche, forfait già nella 1a giornata di campionato e ora rischia di mancare anche venerdì in casa contro il Venezia. Da valutare rientro da inizio settembre.",2026-08-25
+4510,Leao,MIL,a,a,19,75,18,75,28,5.88,6.86,9,3,5,0,0,0,34,6.19,7.06,8,8,5,0,0,0,33,6.39,7.41,9,9,5,0,0,0,0,0,7.03,calante,74,89,87,83,5.0,indisponibile,"L'attaccante portoghese non al meglio per noie fisiche, forfait già nella 1a giornata di campionato e ora rischia di mancare anche venerdì in casa contro il Venezia. Da valutare rientro da inizio settembre.",2026-08-26
 5841,Svilar,ROM,por,p,18,75,18,75,38,6.26,5.45,0,0,0,0,31,0,38,6.32,5.38,0,0,1,0,35,0,15,6.47,5.37,0,0,1,0,19,1,0,0,5.41,stabile,100,100,39,80,4.67,,,
-531,Berardi,SAS,a,a,19,101,18,101,26,6.31,7.19,8,4,2,1,0,0,,,,,,,,,,17,6.53,8.06,9,2,6,0,0,0,0,0,7.44,calante,68,,45,56,16.67,indisponibile,"L'attaccante non al meglio per una distorsione alla caviglia destra rimediata a luglio a inizio ritiro, condizioni in lento miglioramento. Dopo aver saltato la sfida di campionato contro l'Atalanta rischia di mancare anche sabato contro il Toro. Da valutare quotidianamente.",2026-08-25
-2766,Zaniolo,UDI,t/a,c,17,85,18,85,31,6.26,6.77,5,5,8,0,0,0,18,6.03,6.22,2,1,6,1,0,0,,,,,,,,,,0,0,6.56,crescente,82,47,,64,12.33,indisponibile,il calciatore nella 1a giornata contro il Como è uscito dal campo a causa di un guaio muscolare alla gamba che andrà valutato con appositi esami medici. Di certo assente sabato a Monza.,2026-08-25
+531,Berardi,SAS,a,a,19,101,18,101,26,6.31,7.19,8,4,2,1,0,0,,,,,,,,,,17,6.53,8.06,9,2,6,0,0,0,0,0,7.44,calante,68,,45,56,16.67,indisponibile,"L'attaccante non al meglio per una distorsione alla caviglia destra rimediata a luglio a inizio ritiro, condizioni in lento miglioramento. Dopo aver saltato la sfida di campionato contro l'Atalanta rischia di mancare anche sabato contro il Toro. Da valutare quotidianamente.",2026-08-26
+2766,Zaniolo,UDI,t/a,c,17,85,18,85,31,6.26,6.77,5,5,8,0,0,0,18,6.03,6.22,2,1,6,1,0,0,,,,,,,,,,0,0,6.56,crescente,82,47,,64,12.33,indisponibile,"il calciatore nella 1a giornata contro il Como è uscito dal campo a causa di una lesione muscolare al bicipite femorale della coscia destra. Stop di circa 25 giorni, recuperabile dalla seconda metà di settembre.",2026-08-26
 4998,Molina N.,ROM,e,d,18,80,18,80,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,4.67,,,
 5995,De Ketelaere,ATA,a,a,18,98,17,98,31,6.21,6.60,3,5,4,0,0,0,34,6.19,6.94,7,5,1,0,0,0,33,6.32,7.39,10,8,1,0,0,0,0,0,6.86,calante,82,89,87,86,4.67,,,
 5116,Martinez Jo.,INT,por,p,17,63,17,63,5,6.0,5.2,0,0,0,0,4,0,5,6.3,5.7,0,0,0,0,3,0,36,6.14,4.97,0,0,2,1,43,1,0,0,5.3,stabile,13,13,95,40,1.33,,,
@@ -59,7 +59,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 7314,Taylor K.,LAZ,c/t,c,13,57,13,57,17,6.06,6.56,3,2,5,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.56,n_d,45,,,45,7.67,,,
 4728,Nkunku,MIL,a,a,14,20,13,20,26,5.94,6.87,7,3,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.87,n_d,68,,,68,5.0,,,
 4317,N'Dicka,ROM,dc,d,13,44,13,44,31,6.08,6.32,3,1,5,0,0,0,38,6.05,6.03,0,0,2,0,0,0,25,5.86,5.86,0,3,6,0,0,0,0,0,6.14,crescente,82,100,66,83,4.67,,,
-2038,Pinamonti,SAS,pc,a,12,48,13,51,34,5.88,6.62,9,3,2,1,0,0,36,5.96,6.68,10,1,4,0,0,0,37,5.92,6.70,11,1,4,0,0,0,0,0,6.65,stabile,89,95,97,94,16.67,indisponibile,l'attaccante infortunato e assente per domenica a Bergamo contro la Dea. Ipotizziamo un recupero per fine agosto.,2026-08-25
+2038,Pinamonti,SAS,pc,a,12,48,13,51,34,5.88,6.62,9,3,2,1,0,0,36,5.96,6.68,10,1,4,0,0,0,37,5.92,6.70,11,1,4,0,0,0,0,0,6.65,stabile,89,95,97,94,16.67,indisponibile,l'attaccante infortunato e assente per domenica a Bergamo contro la Dea. Ipotizziamo un recupero per fine agosto.,2026-08-26
 5687,Vlasic,TOR,t,c,12,72,13,75,37,6.03,6.66,8,3,7,0,0,0,30,6.07,6.67,5,3,0,0,0,0,33,6.02,6.30,3,2,3,0,0,0,0,0,6.59,crescente,97,79,87,88,10.67,,,
 6956,Solet,UDI,dc,d,13,46,13,46,34,6.18,6.40,3,1,1,0,0,0,19,6.16,6.29,1,1,1,1,0,0,,,,,,,,,,0,0,6.36,stabile,89,50,,70,12.33,,,
 7547,Kevin Carlos,CAG,pc,a,12,34,13,37,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,15.0,,,
@@ -128,10 +128,10 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 6989,Tiago Gabriel,LEC,dc,d,9,20,9,20,36,6.0,6.01,2,0,7,0,0,0,2,6.25,6.25,0,0,0,0,0,0,,,,,,,,,,0,0,6.01,n_d,95,5,,50,16.0,,,
 5029,Geubbels,LEC,pc,a,8,20,9,23,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,16.0,,,
 2155,Cutrone,MON,pc,a,8,30,9,33,14,5.71,5.93,1,0,0,0,0,0,33,6.02,6.67,7,4,1,0,0,0,,,,,,,,,,0,1,6.21,calante,37,87,,62,17.33,,,
-6717,Konè I.,SAS,c,c,9,20,9,20,35,6.19,6.63,6,0,3,1,0,0,,,,,,,,,,,,,,,,,,,0,0,6.63,n_d,92,,,92,16.67,indisponibile,"il centrocampista canadese vittima a giugno nella gara dei Mondiali di una rottura di tibia e perone. Operato, punta a tornare in campo da dicembre.",2026-08-25
+6717,Konè I.,SAS,c,c,9,20,9,20,35,6.19,6.63,6,0,3,1,0,0,,,,,,,,,,,,,,,,,,,0,0,6.63,n_d,92,,,92,16.67,indisponibile,"il centrocampista canadese vittima a giugno nella gara dei Mondiali di una rottura di tibia e perone. Operato, punta a tornare in campo da dicembre.",2026-08-26
 6462,Okoye,UDI,por,p,9,29,9,29,30,6.07,5.08,0,1,1,1,32,1,25,6.1,4.4,0,0,1,0,40,0,21,6.17,4.93,0,0,2,0,25,0,0,0,4.85,stabile,79,66,55,67,12.33,,,
 5641,Chalobah T.,COM,dd/dc,d,10,32,9,30,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,11.33,,,
-6046,Hien,ATA,dc,d,8,11,8,11,28,5.91,5.86,1,0,5,0,0,0,29,5.95,5.78,0,0,10,0,0,0,22,5.95,5.82,0,0,4,1,0,0,0,0,5.83,stabile,74,76,58,69,4.67,indisponibile,"il difensore operato a fine giugno per una lesione del tendine prossimale del muscolo semimembranoso della coscia sinistra, in recupero e pronto a tornare in campo dall'inizio di ottobre.",2026-08-25
+6046,Hien,ATA,dc,d,8,11,8,11,28,5.91,5.86,1,0,5,0,0,0,29,5.95,5.78,0,0,10,0,0,0,22,5.95,5.82,0,0,4,1,0,0,0,0,5.83,stabile,74,76,58,69,4.67,indisponibile,"il difensore operato a fine giugno per una lesione del tendine prossimale del muscolo semimembranoso della coscia sinistra, in recupero e pronto a tornare in campo dall'inizio di ottobre.",2026-08-26
 554,Zappacosta,ATA,dd/e,d,8,19,8,19,35,6.06,6.3,3,1,3,0,0,0,30,5.98,6.4,4,2,3,0,0,0,31,5.92,6.06,2,1,5,0,0,0,0,0,6.28,stabile,92,79,82,84,4.67,,,
 4364,Gaetano,ATA,m/c,c,9,35,8,30,32,6.06,6.31,2,4,4,0,0,0,27,6.04,6.41,2,4,0,0,0,0,17,6.12,6.88,5,0,2,1,0,0,0,1,6.45,calante,84,71,45,67,4.67,,,
 6042,Lucumì,JUV,dc,d,8,18,8,18,28,5.88,5.89,1,0,5,0,0,0,32,5.83,5.70,0,1,8,1,0,0,29,6.10,6.07,0,0,2,0,0,0,0,1,5.87,stabile,74,84,76,78,4.33,,,
@@ -188,8 +188,8 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 4401,Gabbia,MIL,dc,d,7,24,7,24,29,5.91,5.84,0,0,4,0,0,0,25,6.04,6.2,2,0,4,0,0,0,17,6.06,6.26,2,0,5,0,0,0,0,0,6.03,calante,76,66,45,62,5.0,,,
 4751,Tomori,MIL,dc,d,7,8,7,8,32,5.97,5.88,0,1,6,1,0,0,18,5.86,5.81,0,1,2,1,0,0,25,6.0,6.32,4,0,6,1,0,0,0,0,5.95,calante,84,47,66,66,5.0,,,
 4856,Chukwueze,MIL,w,c,6,20,7,22,1,5.5,5.5,0,0,0,0,0,0,16,6.09,6.78,3,2,0,0,0,0,20,6.02,6.25,1,2,1,0,0,0,0,0,6.57,crescente,3,42,53,33,5.0,,,
-2741,Pessina,MON,m/c,c,8,20,7,15,,,,,,,,,,11,6.09,6.0,0,0,2,0,0,0,37,6.07,6.46,6,2,3,1,0,0,0,0,6.18,calante,,29,97,63,17.33,indisponibile,"Il centrocampista costretto a saltare l'inizio di campionato per una lussazione della rotula del ginocchio destro rimediata nella prima metà di agosto in allenamento. Tempi di recupero da monitorare, ma proverà a tornare arruolabile dall'inizio di novembre.",2026-08-25
-2724,Buongiorno,NAP,dc,d,7,15,7,15,32,5.89,5.88,0,1,3,0,0,0,22,6.36,6.45,1,0,2,0,0,0,29,6.31,6.5,3,0,7,0,0,0,0,0,6.17,calante,84,58,76,73,4.33,indisponibile,"il difensore operato nella seconda metà di luglio al menisco del ginocchio destro. Sta recuperando lentamente, ipotizziamo possa tornare arruolabile da metà novembre.",2026-08-25
+2741,Pessina,MON,m/c,c,8,20,7,15,,,,,,,,,,11,6.09,6.0,0,0,2,0,0,0,37,6.07,6.46,6,2,3,1,0,0,0,0,6.18,calante,,29,97,63,17.33,indisponibile,"Il centrocampista costretto a saltare l'inizio di campionato per una lussazione della rotula del ginocchio destro rimediata nella prima metà di agosto in allenamento. Tempi di recupero da monitorare, ma proverà a tornare arruolabile dall'inizio di novembre.",2026-08-26
+2724,Buongiorno,NAP,dc,d,7,15,7,15,32,5.89,5.88,0,1,3,0,0,0,22,6.36,6.45,1,0,2,0,0,0,29,6.31,6.5,3,0,7,0,0,0,0,0,6.17,calante,84,58,76,73,4.33,indisponibile,"il difensore operato nella seconda metà di luglio al menisco del ginocchio destro. Sta recuperando lentamente, ipotizziamo possa tornare arruolabile da metà novembre.",2026-08-26
 7411,Daffara,PAR,por,p,7,10,7,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,16.33,,,
 6641,Suzuki,PAR,por,p,7,20,7,20,20,6.02,4.75,0,0,1,0,28,1,37,6.22,4.76,0,0,0,1,53,0,,,,,,,,,,0,0,4.75,stabile,53,97,,75,16.33,,,
 6666,Bernabè,PAR,c,c,7,35,7,35,32,6.17,6.48,3,1,0,0,0,0,19,6.29,6.47,1,1,1,0,0,0,,,,,,,,,,0,0,6.48,stabile,84,50,,67,16.33,,,
@@ -200,18 +200,18 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 5010,Ismajli,TOR,dc,d,7,13,7,13,24,5.92,5.90,0,2,5,0,0,0,29,6.17,6.12,0,0,3,0,0,0,25,5.72,5.68,0,0,2,0,0,0,0,0,5.92,stabile,63,76,66,68,10.67,,,
 6218,Oristanio,TOR,w/t,c,7,14,7,12,18,5.78,5.92,1,0,1,0,0,0,37,6.05,6.34,3,3,3,0,0,0,24,6.10,6.38,2,1,1,0,0,0,0,1,6.14,calante,47,97,63,69,10.67,,,
 608,Zapata D.,TOR,pc,a,6,16,7,18,23,5.83,6.13,3,1,0,0,0,0,7,6.57,7.79,3,0,1,0,0,0,37,6.26,7.36,13,3,2,0,0,0,0,0,6.87,calante,61,18,97,59,10.67,,,
-6485,Kristensen T.,ATA,dd/dc,d,8,22,7,20,28,5.98,6.23,3,0,4,0,0,0,21,5.57,5.60,1,0,5,0,0,0,26,5.79,5.75,0,1,2,1,0,0,0,1,5.95,crescente,74,55,68,66,4.67,indisponibile,"Il difensore non disponibile domenica scorsa nella sfida con il Sassuolo per un problema alla caviglia. Da valutare quotidianamente, a rischio per lunedì sera contro il Bologna.",2026-08-25
+6485,Kristensen T.,ATA,dd/dc,d,8,22,7,20,28,5.98,6.23,3,0,4,0,0,0,21,5.57,5.60,1,0,5,0,0,0,26,5.79,5.75,0,1,2,1,0,0,0,1,5.95,crescente,74,55,68,66,4.67,indisponibile,"Il difensore non disponibile domenica scorsa nella sfida con il Sassuolo per un problema alla caviglia. Da valutare quotidianamente, a rischio per lunedì sera contro il Bologna.",2026-08-26
 6680,Karlstrom,UDI,m/c,c,8,23,7,20,36,5.96,5.96,1,0,6,0,0,0,37,5.85,5.78,0,2,9,0,0,0,,,,,,,,,,0,0,5.89,stabile,95,97,,96,12.33,,,
 6783,Unai Gomez,UDI,t,c,6,15,7,17,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,12.33,,,
 5946,Sow,GEN,m/c,c,8,20,7,15,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,13.33,,,
 4479,Elmas,ATA,w/t,c,7,28,7,28,28,5.80,5.96,1,3,3,0,0,0,13,6.12,7.04,4,0,0,0,0,0,9,6.0,6.56,2,0,2,0,0,0,0,1,6.4,calante,74,34,24,44,4.67,,,
 4664,Badiashile,NAP,dc,d,7,21,7,21,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,4.33,,,
 7580,Sutalo J.,LAZ,dc,d,7,19,7,19,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,7.67,,,
-6916,Ahanor,ATA,b/ds/e,d,7,16,6,14,21,5.79,5.69,0,0,2,1,0,0,6,6.0,6.0,0,0,0,0,0,0,,,,,,,,,,0,0,5.81,calante,55,16,,36,4.67,indisponibile,"Il difensore fermo dal 13 agosto per una distrazione di basso grado a carico dei muscoli adduttori della gamba destra, ha saltato la sfida contro il Sassuolo e ora proverà a tornare arruolabile da fine agosto, ma da valutare la convocazione per lunedì sera contro il Bologna.",2026-08-25
+6916,Ahanor,ATA,b/ds/e,d,7,16,6,14,21,5.79,5.69,0,0,2,1,0,0,6,6.0,6.0,0,0,0,0,0,0,,,,,,,,,,0,0,5.81,calante,55,16,,36,4.67,indisponibile,"Il difensore fermo dal 13 agosto per una distrazione di basso grado a carico dei muscoli adduttori della gamba destra, ha saltato la sfida contro il Sassuolo e ora proverà a tornare arruolabile da fine agosto, ma da valutare la convocazione per lunedì sera contro il Bologna.",2026-08-26
 4887,Bellanova,ATA,dd/e,d,6,17,6,17,22,5.82,5.82,0,1,2,0,0,0,35,6.04,6.26,0,9,3,0,0,0,36,6.14,6.35,1,7,5,0,0,0,0,0,6.06,calante,58,92,95,82,4.67,,,
 7219,Bernasconi,ATA,ds/e,d,6,18,6,18,22,6.09,6.16,0,3,3,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.16,n_d,58,,,58,4.67,,,
 5422,Zalewski,ATA,w,c,5,17,6,20,31,6.10,6.40,2,5,3,0,0,0,19,6.03,6.21,1,2,3,0,0,0,22,5.80,5.77,0,1,1,1,0,0,0,0,6.22,crescente,82,50,58,63,4.67,,,
-5918,Sulemana K.,ATA,a,a,6,10,6,10,21,6.0,6.24,2,1,4,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.24,n_d,55,,,55,4.67,indisponibile,"L'attaccante KO in amichevole l'8 agosto vittima di una lesione del collaterale mediale di secondo grado del ginocchio sinistro, recuperabile da inizio ottobre.",2026-08-25
+5918,Sulemana K.,ATA,a,a,6,10,6,10,21,6.0,6.24,2,1,4,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.24,n_d,55,,,55,4.67,indisponibile,"L'attaccante KO in amichevole l'8 agosto vittima di una lesione del collaterale mediale di secondo grado del ginocchio sinistro, recuperabile da inizio ottobre.",2026-08-26
 7212,Heggem,BOL,ds/dc,d,7,17,6,15,25,5.84,5.8,0,0,0,1,0,0,,,,,,,,,,,,,,,,,,,0,0,5.8,n_d,66,,,66,7.33,,,
 4433,Zortea,BOL,dd/e,d,6,19,6,19,28,5.86,5.89,0,2,2,0,0,0,35,6.07,6.6,6,2,3,0,0,0,19,6.16,6.63,2,5,4,0,0,0,0,0,6.25,calante,74,92,50,72,7.33,,,
 5298,Pobega,BOL,m/c,c,7,16,6,13,23,5.83,6.17,3,1,2,1,0,0,20,6.05,6.25,2,2,4,2,0,0,7,5.93,5.93,0,0,0,0,0,0,0,0,6.15,stabile,61,53,18,44,7.33,,,
@@ -232,19 +232,19 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 5761,Zhegrova,JUV,w,c,5,18,6,20,12,5.96,5.96,0,0,1,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.96,n_d,32,,,32,4.33,,,
 2832,Boga,JUV,w/a,a,7,29,6,26,13,6.19,7.15,4,1,1,0,0,0,,,,,,,,,,,,,,,,,,,0,0,7.15,n_d,34,,,34,4.33,,,
 5620,Tavares N.,LAZ,ds/e,d,6,12,6,12,22,5.91,5.80,0,0,5,0,0,0,23,6.28,6.5,0,7,2,1,0,0,,,,,,,,,,0,0,6.06,calante,58,61,,60,7.67,,,
-2188,Marusic,LAZ,dd/ds/e,d,6,23,6,20,33,5.86,5.97,1,2,1,1,0,0,31,5.85,6.16,4,0,1,0,0,0,37,5.72,5.73,1,0,3,1,0,0,0,0,5.98,stabile,87,82,97,89,7.67,indisponibile,il terzino dei biancocelesti KO il 24 agosto a Bologna vittima di un problema muscolare alla coscia che andrà valutato. Di certo assente domenica contro il Genoa.,2026-08-25
+2188,Marusic,LAZ,dd/ds/e,d,6,23,6,20,33,5.86,5.97,1,2,1,1,0,0,31,5.85,6.16,4,0,1,0,0,0,37,5.72,5.73,1,0,3,1,0,0,0,0,5.98,stabile,87,82,97,89,7.67,indisponibile,il terzino dei biancocelesti KO il 24 agosto a Bologna vittima di un problema muscolare alla coscia che andrà valutato. Di certo assente domenica contro il Genoa.,2026-08-26
 6556,Noslin,LAZ,a,a,6,17,6,17,23,6.02,6.5,4,2,4,1,0,0,19,6.0,6.37,2,2,2,0,0,0,17,6.35,7.41,5,4,2,0,0,0,0,0,6.64,calante,61,50,45,52,7.67,,,
 6632,Gaspar K.,LEC,dc,d,6,12,6,12,21,5.83,5.64,0,0,6,1,0,0,24,6.17,6.15,0,1,3,0,0,0,,,,,,,,,,0,0,5.83,calante,55,63,,59,16.0,,,
 6990,Veiga D.,LEC,dd/e,d,6,12,6,12,36,5.82,5.69,0,0,9,0,0,0,11,5.73,5.73,0,0,0,0,0,0,,,,,,,,,,0,0,5.71,stabile,95,29,,62,16.0,,,
 4502,Gallo,LEC,ds/e,d,6,13,6,13,37,5.95,5.99,0,3,3,0,0,0,31,5.79,5.65,0,2,3,1,0,0,34,5.94,6.0,0,3,2,0,0,0,0,0,5.89,stabile,97,82,89,89,16.0,,,
 6549,Pierotti,LEC,w,c,5,17,6,19,37,5.80,5.85,1,1,4,0,0,0,35,5.81,6.1,4,1,4,1,0,0,7,6.07,6.21,0,1,0,0,0,0,0,0,6.0,calante,97,92,18,69,16.0,,,
-7008,Gimenez,MIL,pc,a,5,10,6,10,15,5.5,5.53,0,1,2,0,0,0,12,5.88,6.75,5,1,3,1,0,0,,,,,,,,,,0,0,5.99,calante,39,32,,36,5.0,indisponibile,l'attaccante messicano sta curando una fastidiosa distorsione alla caviglia e sarà out anche venerdì in casa contro il Venezia. Da valutare in vista della 3a giornata di campionato.,2026-08-25
+7008,Gimenez,MIL,pc,a,5,10,6,10,15,5.5,5.53,0,1,2,0,0,0,12,5.88,6.75,5,1,3,1,0,0,,,,,,,,,,0,0,5.99,calante,39,32,,36,5.0,indisponibile,l'attaccante messicano sta curando una fastidiosa distorsione alla caviglia e sarà out anche venerdì in casa contro il Venezia. Da valutare in vista della 3a giornata di campionato.,2026-08-26
 7485,Mangas,MON,ds/e,d,6,15,6,15,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,17.33,,,
 6593,Akinsanmiro,MON,c,c,6,16,6,16,23,5.80,5.80,0,1,2,0,0,0,,,,,,,,,,,,,,,,,,,0,1,5.8,n_d,61,,,61,17.33,,,
 6202,Beukema,NAP,dc,d,6,12,6,12,22,5.93,6.16,2,0,2,0,0,0,34,5.93,5.94,0,1,1,0,0,0,30,6.02,6.02,1,0,4,1,0,0,0,0,6.07,stabile,58,89,79,75,4.33,,,
 6831,Neres,NAP,w/a,a,7,20,6,17,16,6.19,6.84,3,3,3,0,0,0,25,6.32,6.72,2,5,2,0,0,0,,,,,,,,,,0,0,6.79,stabile,42,66,,54,4.33,,,
 6663,Circati,PAR,dc,d,6,18,6,18,31,5.92,5.92,1,0,6,0,0,0,6,5.83,5.75,0,0,1,0,0,0,,,,,,,,,,0,0,5.86,stabile,82,16,,49,16.33,,,
-4349,Nicolussi Caviglia,PAR,m/c,c,7,21,6,16,23,5.89,6.02,0,4,4,0,0,0,35,6.2,6.53,4,3,5,1,0,0,6,5.92,6.0,0,1,1,0,0,0,0,0,6.17,stabile,61,92,16,56,16.33,indisponibile,"il centrocampista alle prese da luglio con una lesione di medio grado alla coscia destra, può tornare arruolabile da inizio settembre.",2026-08-25
+4349,Nicolussi Caviglia,PAR,m/c,c,7,21,6,16,23,5.89,6.02,0,4,4,0,0,0,35,6.2,6.53,4,3,5,1,0,0,6,5.92,6.0,0,1,1,0,0,0,0,0,6.17,stabile,61,92,16,56,16.33,indisponibile,"il centrocampista alle prese da luglio con una lesione di medio grado alla coscia destra, può tornare arruolabile da inizio settembre.",2026-08-26
 2528,Matic,SAS,m/c,c,7,17,6,15,34,5.96,5.96,1,1,6,1,0,0,,,,,,,,,,0,0.0,0.0,0,0,0,0,0,0,0,0,5.96,n_d,89,,0,44,16.67,,,
 6495,Comuzzo,TOR,dc,d,6,13,6,13,24,5.75,5.75,1,0,2,0,0,0,28,5.91,5.93,1,0,5,0,0,0,2,6.0,5.75,0,0,1,0,0,0,0,1,5.82,stabile,63,74,5,47,10.67,,,
 6170,Gineitis,TOR,m/c,c,7,15,6,12,27,5.87,5.81,0,1,5,0,0,0,28,5.95,6.21,3,1,5,0,0,0,10,6.05,5.95,0,0,2,0,0,0,0,0,5.96,stabile,71,74,26,57,10.67,,,
@@ -252,7 +252,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 7253,Bella-Kotchap,VEN,dc,d,6,13,6,13,18,5.83,5.75,0,0,3,0,0,0,,,,,,,,,,,,,,,,,,,0,1,5.75,n_d,47,,,47,19.67,,,
 5674,Basic,VEN,m/c,c,7,20,6,19,23,6.09,6.43,2,3,0,1,0,0,0,0.0,0.0,0,0,0,0,0,0,14,5.54,5.36,0,0,5,0,0,0,0,1,6.12,crescente,61,0,37,33,19.67,,,
 7329,Obrador,SAS,ds/e,d,6,15,6,15,16,6.06,6.41,1,3,1,0,0,0,,,,,,,,,,,,,,,,,,,0,1,6.41,n_d,42,,,42,16.67,,,
-7146,Tourè I.,MON,e/m,c,8,19,6,15,30,5.82,5.82,1,0,4,1,0,0,,,,,,,,,,,,,,,,,,,0,1,5.82,n_d,79,,,79,17.33,indisponibile,"Il centrocampista arrivato in Brianza dal Pisa infortunato, condizioni da valutare a causa di un fastidio articolare. Di certo assente sabato in casa contro l'Udinese.",2026-08-25
+7146,Tourè I.,MON,e/m,c,8,19,6,15,30,5.82,5.82,1,0,4,1,0,0,,,,,,,,,,,,,,,,,,,0,1,5.82,n_d,79,,,79,17.33,indisponibile,"Il centrocampista arrivato in Brianza dal Pisa infortunato, condizioni da valutare a causa di un fastidio articolare. Di certo assente sabato in casa contro l'Udinese.",2026-08-26
 2640,Kolasinac,ATA,ds/dc,d,6,10,5,8,17,6.03,5.94,0,0,3,0,0,0,23,6.13,5.98,0,2,7,0,0,0,29,6.03,6.07,1,0,4,0,0,0,0,0,5.98,stabile,45,61,76,61,4.67,,,
 4896,Maldini,CAG,t/a,a,6,21,5,21,18,5.94,6.31,2,1,1,0,0,0,27,6.02,6.59,6,0,5,0,0,0,16,6.19,6.97,4,1,1,0,0,0,0,1,6.53,calante,47,71,42,53,15.0,,,
 7068,Vitik,BOL,dc,d,5,10,5,10,18,5.94,5.86,0,0,3,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.86,n_d,47,,,47,7.33,,,
@@ -262,8 +262,8 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 7274,Zè Pedro,CAG,dd/dc,d,6,15,5,13,22,5.77,5.68,0,1,6,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.68,n_d,58,,,58,15.0,,,
 6640,Felici,CAG,w,c,4,8,5,8,11,6.05,6.55,2,1,3,0,0,0,18,5.83,5.97,0,3,1,0,0,0,,,,,,,,,,0,0,6.33,crescente,29,47,,38,15.0,,,
 6893,Kempf,COM,dc,d,5,13,5,13,29,6.12,6.52,4,1,3,0,0,0,31,5.85,5.76,0,0,4,1,0,0,,,,,,,,,,0,0,6.23,crescente,76,82,,79,11.33,,,
-7127,Addai,COM,w/a,c,4,8,5,10,12,5.96,6.54,3,0,4,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.54,n_d,32,,,32,11.33,indisponibile,"l'ala offensiva dei lariani vittima della rottura tendine d'Achille, proverà a recuperare dalla seconda metà di settembre.",2026-08-25
-5449,Parisi,FIO,ds/e,d,5,10,5,10,23,6.02,5.98,1,1,6,0,0,0,20,6.0,6.22,2,0,3,0,0,0,21,5.69,5.64,0,1,4,0,0,0,0,0,5.98,crescente,61,53,55,56,9.67,indisponibile,"il cursore di fascia della Viola sta svolgendo l'iter di recupero dall'infortunio al legamento crociato al ginocchio, punta a tornare convocabile da novembre.",2026-08-25
+7127,Addai,COM,w/a,c,4,8,5,10,12,5.96,6.54,3,0,4,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.54,n_d,32,,,32,11.33,indisponibile,"l'ala offensiva dei lariani vittima della rottura tendine d'Achille, proverà a recuperare dalla seconda metà di settembre.",2026-08-26
+5449,Parisi,FIO,ds/e,d,5,10,5,10,23,6.02,5.98,1,1,6,0,0,0,20,6.0,6.22,2,0,3,0,0,0,21,5.69,5.64,0,1,4,0,0,0,0,0,5.98,crescente,61,53,55,56,9.67,indisponibile,"il cursore di fascia della Viola sta svolgendo l'iter di recupero dall'infortunio al legamento crociato al ginocchio, punta a tornare convocabile da novembre.",2026-08-26
 6415,Palmisani,FRO,por,p,5,12,5,12,,,,,,,,,,,,,,,,,,,0,0.0,0.0,0,0,0,0,0,0,0,0,,n_d,,,0,0,19.33,,,
 7469,Bracaglia,FRO,ds/dc,d,5,14,5,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,19.33,,,
 6238,Oyono A.,FRO,dd/e,d,5,10,5,10,,,,,,,,,,,,,,,,,,,14,5.82,5.75,0,1,4,0,0,0,0,0,5.75,n_d,,,37,37,19.33,,,
@@ -276,9 +276,9 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 6766,Kelly L.,JUV,ds/dc,d,6,14,5,12,35,6.01,6.07,1,1,4,0,0,0,12,5.67,5.62,0,0,1,0,0,0,,,,,,,,,,0,0,5.9,crescente,92,32,,62,4.33,,,
 5685,Koopmeiners,JUV,c/t,c,5,13,5,13,29,5.64,5.55,0,0,5,0,0,0,28,5.98,6.39,3,4,3,0,0,0,34,6.40,7.53,12,5,5,0,0,0,0,0,6.2,calante,76,74,89,80,4.33,,,
 4817,Pedraza,LAZ,ds/e,d,5,15,5,15,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,7.67,,,
-6629,Dele-Bashiru,LAZ,c/t,c,5,13,5,13,21,5.69,5.83,1,0,0,0,0,0,17,6.06,6.65,3,1,0,0,0,0,,,,,,,,,,0,0,6.14,calante,55,45,,50,7.67,indisponibile,"il centrocampista ai box per un guaio muscolare alla gamba lamentato il 24 agosto a Bologna. Da valutare, ma di certo assente domenica contro il Genoa.",2026-08-25
+6629,Dele-Bashiru,LAZ,c/t,c,5,13,5,13,21,5.69,5.83,1,0,0,0,0,0,17,6.06,6.65,3,1,0,0,0,0,,,,,,,,,,0,0,6.14,calante,55,45,,50,7.67,indisponibile,"il centrocampista ai box per un guaio muscolare alla gamba lamentato il 24 agosto a Bologna. Da valutare, ma di certo assente domenica contro il Genoa.",2026-08-26
 7240,Siebert,LEC,dc,d,5,12,5,12,19,5.68,5.76,1,0,3,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.76,n_d,50,,,50,16.0,,,
-6015,Berisha M.,LEC,c/t,c,5,12,5,12,12,6.17,6.92,2,3,0,0,0,0,14,6.07,5.96,0,1,5,0,0,0,,,,,,,,,,0,0,6.56,crescente,32,37,,34,16.0,indisponibile,"Il centrocampista in recupero da una lesione del tendine riflesso del retto femorale destro. Forfait domenica in campionato contro il Venezia, rientro da inizio settembre.",2026-08-25
+6015,Berisha M.,LEC,c/t,c,5,12,5,12,12,6.17,6.92,2,3,0,0,0,0,14,6.07,5.96,0,1,5,0,0,0,,,,,,,,,,0,0,6.56,crescente,32,37,,34,16.0,indisponibile,"Il centrocampista in recupero da una lesione del tendine riflesso del retto femorale destro. Forfait domenica in campionato contro il Venezia, rientro da inizio settembre.",2026-08-26
 7318,Gandelman,LEC,c/t,c,5,10,5,10,16,5.97,6.41,2,1,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.41,n_d,42,,,42,16.0,,,
 4686,Fofana Y.,MIL,m/c,c,6,12,5,10,33,5.85,6.06,2,3,4,0,0,0,34,6.03,6.22,1,6,5,0,0,0,,,,,,,,,,0,0,6.12,stabile,87,89,,88,5.0,,,
 7203,Jashari,MIL,c,c,5,13,5,13,12,5.71,5.79,0,1,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.79,n_d,32,,,32,5.0,,,
@@ -291,7 +291,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 6898,Keita M.,PAR,m/c,c,6,17,5,15,36,6.01,6.06,1,1,1,0,0,0,28,5.73,5.66,0,1,4,1,0,0,,,,,,,,,,0,0,5.91,crescente,95,74,,84,16.33,,,
 6984,Ondrejka,PAR,w/a,c,4,16,5,18,15,5.7,5.63,0,0,2,0,0,0,10,6.35,7.85,5,0,0,0,0,0,,,,,,,,,,0,0,6.46,calante,39,26,,32,16.33,,,
 7213,Frigan,PAR,a,a,5,10,5,10,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,0,,,0,16.33,,,
-6986,Rensch,ROM,b/dd/e,d,6,16,5,14,19,6.16,6.5,1,4,1,0,0,0,8,6.06,6.19,0,1,0,0,0,0,,,,,,,,,,0,0,6.38,crescente,50,21,,36,4.67,indisponibile,Il difensore fuori dai convocati contro la Fiorentina il 24 agosto per un risentimento muscolare al flessore sinistro. Condizioni da valutare in vista di lunedì contro il Lecce nella 2a giornata di campionato.,2026-08-25
+6986,Rensch,ROM,b/dd/e,d,6,16,5,14,19,6.16,6.5,1,4,1,0,0,0,8,6.06,6.19,0,1,0,0,0,0,,,,,,,,,,0,0,6.38,crescente,50,21,,36,4.67,indisponibile,Il difensore fuori dai convocati contro la Fiorentina il 24 agosto per un risentimento muscolare al flessore sinistro. Condizioni da valutare in vista di lunedì contro il Lecce nella 2a giornata di campionato.,2026-08-26
 6677,Adzic,SAS,c/t,c,5,16,5,16,4,6.12,6.88,1,0,0,0,0,0,1,6.0,6.0,0,0,0,0,0,0,,,,,,,,,,0,1,,n_d,11,3,,7,16.67,,,
 7036,Bakola,SAS,c/t,c,5,14,5,14,3,6.17,6.17,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,8,,,8,16.67,,,
 6426,Pedersen,TOR,dd/e,d,5,12,5,12,28,5.84,5.96,1,2,3,0,0,0,23,5.61,5.54,0,0,3,0,0,0,23,5.72,5.72,0,2,4,0,0,0,0,0,5.79,stabile,74,61,61,65,10.67,,,
@@ -304,7 +304,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 5507,Busio,VEN,m/c,c,6,17,5,14,,,,,,,,,,31,5.90,6.03,2,0,4,0,0,0,,,,,,,,,,0,0,6.03,n_d,,82,,82,19.67,,,
 5319,Sohm,VEN,c,c,5,11,5,11,24,5.65,5.62,0,1,3,0,0,0,37,6.03,6.26,4,0,7,0,0,0,,,,,,,,,,0,1,5.86,calante,63,97,,80,19.67,,,
 6994,Perez K.,VEN,c/t,c,5,15,5,15,,,,,,,,,,16,6.03,6.16,1,1,4,0,0,0,,,,,,,,,,0,0,6.16,n_d,,42,,42,19.67,,,
-4387,Adorante,VEN,pc,a,4,10,5,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,19.67,indisponibile,"l'attaccante a fine luglio ha deciso di operarsi per un problema alla schiena, che lo costringerà a stare ai box per buona parte del girone d'andata del campionato. Tentativo di rientro da ottobre.",2026-08-25
+4387,Adorante,VEN,pc,a,4,10,5,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,19.67,indisponibile,"l'attaccante a fine luglio ha deciso di operarsi per un problema alla schiena, che lo costringerà a stare ai box per buona parte del girone d'andata del campionato. Tentativo di rientro da ottobre.",2026-08-26
 7550,Grillitsch,FRO,m/c,c,5,13,5,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,19.33,,,
 2012,Milik,JUV,pc,a,4,11,5,13,2,6.0,6.0,0,0,0,0,0,0,0,0.0,0.0,0,0,0,0,0,0,24,6.0,6.46,4,1,2,1,0,0,0,0,6.46,n_d,5,0,63,23,4.33,,,
 6618,Cissè A.,MIL,w/t,c,5,25,5,25,0,0.0,0.0,0,0,0,0,0,0,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,0,1,,n_d,0,0,,0,5.0,,,
@@ -332,9 +332,9 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 4970,Messias,GEN,w/t,c,4,8,4,8,19,6.18,6.68,3,1,1,0,0,0,16,6.0,6.03,1,1,1,0,0,0,17,6.18,6.35,1,0,0,0,0,0,0,0,6.42,crescente,50,42,45,46,13.33,,,
 7453,Havel,GEN,pc,a,3,7,4,9,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,13.33,,,
 5301,Luis Henrique,INT,e/w,c,5,14,4,12,27,5.89,6.06,1,2,1,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.06,n_d,71,,,71,1.33,,,
-5831,Gatti,JUV,dc,d,4,10,4,10,16,5.94,6.22,2,0,3,0,0,0,28,6.14,6.21,1,0,2,0,0,0,32,5.97,6.11,4,0,7,0,0,0,0,0,6.2,stabile,42,74,84,67,4.33,indisponibile,il difensore non convocato domenica scorsa per Frosinone a causa di noie fisiche. Da valutare in vista di sabato sera contro il Parma nella 2a giornata di A.,2026-08-25
+5831,Gatti,JUV,dc,d,4,10,4,10,16,5.94,6.22,2,0,3,0,0,0,28,6.14,6.21,1,0,2,0,0,0,32,5.97,6.11,4,0,7,0,0,0,0,0,6.2,stabile,42,74,84,67,4.33,indisponibile,il difensore non convocato domenica scorsa per Frosinone a causa di noie fisiche. Da valutare in vista di sabato sera contro il Parma nella 2a giornata di A.,2026-08-26
 4911,Douglas Luiz,JUV,c,c,4,15,4,15,0,0.0,0.0,0,0,0,0,0,0,15,5.87,5.8,0,0,2,0,0,0,,,,,,,,,,0,0,5.8,n_d,0,39,,20,4.33,,,
-333,Cataldi,LAZ,m/c,c,5,15,4,12,27,6.07,6.41,3,3,6,0,0,0,24,6.04,6.40,3,0,1,0,0,0,22,5.98,5.95,1,0,8,0,0,0,0,0,6.32,crescente,71,63,58,64,7.67,indisponibile,"il regista biancoceleste ha ripreso a lavorare sul campo d'allenamento, messa da parte l'ernia bilaterale che lo ha costretto a saltare la preparazione estiva. Da valutare tuttavia la sua convocazione a partire dalla 2a giornata di campionato domenica contro il Genoa.",2026-08-25
+333,Cataldi,LAZ,m/c,c,5,15,4,12,27,6.07,6.41,3,3,6,0,0,0,24,6.04,6.40,3,0,1,0,0,0,22,5.98,5.95,1,0,8,0,0,0,0,0,6.32,crescente,71,63,58,64,7.67,indisponibile,"il regista biancoceleste ha ripreso a lavorare sul campo d'allenamento, messa da parte l'ernia bilaterale che lo ha costretto a saltare la preparazione estiva. Recuperabile da inizio ottobre.",2026-08-26
 7322,Ngom,LEC,m/c,c,5,16,4,13,13,5.69,5.65,0,0,1,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.65,n_d,34,,,34,16.0,,,
 5739,De Winter,MIL,dd/dc,d,5,14,4,12,24,5.75,5.90,1,1,1,0,0,0,24,5.85,6.10,3,0,6,0,0,0,29,5.84,5.74,0,1,6,1,0,0,0,0,5.93,stabile,63,63,76,67,5.0,,,
 5273,Estupinan,MIL,ds/e,d,4,13,4,13,14,5.64,5.71,1,1,5,1,0,0,,,,,,,,,,,,,,,,,,,0,0,5.71,n_d,37,,,37,5.0,,,
@@ -353,7 +353,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 7536,Diallo O.,PAR,w/a,c,3,10,4,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,16.33,,,
 6631,Ghilardi,ROM,dc,d,4,10,4,10,21,5.98,5.95,0,0,1,0,0,0,24,5.73,5.54,0,0,7,1,0,0,,,,,,,,,,0,0,5.8,crescente,55,63,,59,4.67,,,
 6271,El Aynaoui,ROM,m/c,c,5,20,4,18,21,5.98,6.10,1,2,5,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.1,n_d,55,,,55,4.67,,,
-4374,Walukiewicz,SAS,dd/dc,d,4,12,4,10,34,5.81,5.74,0,1,7,0,0,0,28,5.73,5.64,0,0,6,0,0,0,27,5.76,5.65,0,0,6,0,0,0,0,0,5.69,stabile,89,74,71,78,16.67,indisponibile,"Il difensore alle prese con un forte trauma contusivo alla gamba destra, out già domenica scorsa contro l'Atalanta nel primo turno di A. Da valutare il rientro da fine agosto, ma difficilmente ci sarà sabato contro il Toro.",2026-08-25
+4374,Walukiewicz,SAS,dd/dc,d,4,12,4,10,34,5.81,5.74,0,1,7,0,0,0,28,5.73,5.64,0,0,6,0,0,0,27,5.76,5.65,0,0,6,0,0,0,0,0,5.69,stabile,89,74,71,78,16.67,indisponibile,"Il difensore alle prese con un forte trauma contusivo alla gamba destra, out già domenica scorsa contro l'Atalanta nel primo turno di A. Da valutare il rientro da fine agosto, ma difficilmente ci sarà sabato contro il Toro.",2026-08-26
 5851,Doig,SAS,ds/e,d,4,10,4,10,27,5.85,5.76,0,0,5,0,0,0,,,,,,,,,,28,5.82,5.77,0,2,7,0,0,0,0,0,5.76,stabile,71,,74,72,16.67,,,
 7526,Comert,TOR,dc,d,4,12,4,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,10.67,,,
 7535,Fitz-Jim,TOR,m/c,c,5,23,4,18,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,10.67,,,
@@ -361,7 +361,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 7349,Kulenovic,TOR,pc,a,3,7,4,9,7,5.71,5.79,0,1,2,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.79,n_d,18,,,18,10.67,,,
 4263,Kabasele,UDI,dc,d,4,12,4,12,28,5.98,6.18,3,0,5,1,0,0,16,5.84,6.22,2,0,0,0,0,0,10,5.75,5.8,1,0,5,0,0,0,0,0,6.12,crescente,74,42,26,47,12.33,,,
 5820,Bertola,UDI,dd/ds/dc,d,6,13,4,10,25,5.86,5.84,0,1,3,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.84,n_d,66,,,66,12.33,,,
-5527,Zanoli,UDI,dd/e,d,4,10,4,10,19,6.05,6.29,1,2,1,0,0,0,27,5.91,5.96,1,0,3,0,0,0,18,5.83,5.75,0,2,4,0,0,0,0,0,6.08,crescente,50,71,47,56,12.33,indisponibile,"il calciatore operato a fine gennaio per la lesione del legamento crociato anteriore del ginocchio destro, sta ultimando la fase di recupero e può tornare in campo da ottobre.",2026-08-25
+5527,Zanoli,UDI,dd/e,d,4,10,4,10,19,6.05,6.29,1,2,1,0,0,0,27,5.91,5.96,1,0,3,0,0,0,18,5.83,5.75,0,2,4,0,0,0,0,0,6.08,crescente,50,71,47,56,12.33,indisponibile,"il calciatore operato a fine gennaio per la lesione del legamento crociato anteriore del ginocchio destro, sta ultimando la fase di recupero e può tornare in campo da ottobre.",2026-08-26
 7312,Arizala,UDI,ds/e,d,4,8,4,8,5,5.8,5.8,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.8,n_d,13,,,13,12.33,,,
 7208,Miller L.,UDI,m/c,c,4,15,4,12,19,5.92,5.95,0,2,4,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.95,n_d,50,,,50,12.33,,,
 7272,Gueye,UDI,pc,a,3,6,4,7,13,5.77,5.92,1,0,2,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.92,n_d,34,,,34,12.33,,,
@@ -371,9 +371,9 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 7563,Favasuli,NAP,dd/ds/e,d,5,13,4,11,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,4.33,,,
 5578,Kossounou,ATA,dd/dc,d,3,12,3,12,16,5.94,6.09,1,0,1,0,0,0,17,5.94,5.91,0,0,1,0,0,0,,,,,,,,,,0,0,6.02,stabile,42,45,,44,4.67,,,
 6024,Sulemana I.,ATA,m/c,c,3,8,3,7,18,5.69,5.78,1,0,3,0,0,0,6,6.17,7.08,2,0,1,0,0,0,19,5.89,6.13,2,0,4,0,0,0,0,1,6.24,calante,47,16,50,38,4.67,,,
-5498,Casale,BOL,dc,d,3,5,3,5,10,5.65,5.65,0,0,0,0,0,0,15,5.63,5.53,0,1,1,0,0,0,19,5.68,5.55,0,0,5,0,0,0,0,0,5.59,stabile,26,39,50,38,7.33,indisponibile,"lavoro differenziato a Casteldebole per il difensore negli ultimi giorni a causa di un fastidio muscolare alla gamba. Out lunedì scorso contro la Lazio, da valutare in settimana le possibilità di rientro tra i convocati nella 2a giornata di A contro l'Atalanta.",2026-08-25
+5498,Casale,BOL,dc,d,3,5,3,5,10,5.65,5.65,0,0,0,0,0,0,15,5.63,5.53,0,1,1,0,0,0,19,5.68,5.55,0,0,5,0,0,0,0,0,5.59,stabile,26,39,50,38,7.33,indisponibile,"lavoro differenziato a Casteldebole per il difensore negli ultimi giorni a causa di un fastidio muscolare alla gamba. Out lunedì scorso contro la Lazio, da valutare in settimana le possibilità di rientro tra i convocati nella 2a giornata di A contro l'Atalanta.",2026-08-26
 7326,Helland,BOL,dd/dc,d,3,12,3,12,6,5.5,5.33,0,0,2,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.33,n_d,16,,,16,7.33,,,
-7125,Idrissi R.,CAG,ds/e,d,3,3,3,3,17,5.82,6.09,2,0,3,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.09,n_d,45,,,45,15.0,indisponibile,"il calciatore in ripresa dalla rottura del legamento crociato, può tornare arruolabile dalla fine di ottobre.",2026-08-25
+7125,Idrissi R.,CAG,ds/e,d,3,3,3,3,17,5.82,6.09,2,0,3,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.09,n_d,45,,,45,15.0,indisponibile,"il calciatore in ripresa dalla rottura del legamento crociato, può tornare arruolabile dalla fine di ottobre.",2026-08-26
 7128,Kuhn,COM,w/a,a,4,7,3,5,14,5.96,6.25,1,1,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.25,n_d,37,,,37,11.33,,,
 4378,Ranieri L.,FIO,ds/dc,d,3,12,3,10,31,5.85,5.79,1,0,8,1,0,0,36,5.92,5.96,1,2,7,0,0,0,25,5.86,5.88,2,1,14,0,0,0,0,0,5.86,stabile,82,95,66,81,9.67,,,
 7175,Joao Mario,FIO,dd/e,d,3,12,3,12,14,5.79,6.0,1,1,2,0,0,0,,,,,,,,,,,,,,,,,,,0,1,6.0,n_d,37,,,37,9.67,,,
@@ -385,7 +385,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 6917,Masini,FRO,m/c,c,3,10,3,8,21,5.98,5.90,0,1,5,0,0,0,18,6.06,6.17,1,0,2,0,0,0,,,,,,,,,,0,1,6.0,stabile,55,47,,51,19.33,,,
 6503,Stankovic A.,INT,m/c,c,3,9,3,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,1.33,,,
 5813,Miretti,JUV,c/t,c,3,7,3,7,15,5.97,6.2,1,1,1,0,0,0,25,5.98,6.42,3,3,2,0,0,0,20,5.78,5.9,1,1,3,0,0,0,0,0,6.21,stabile,39,66,53,53,4.33,,,
-6822,Ekhator,JUV,a,a,3,10,3,10,25,5.96,6.28,3,0,3,0,0,0,15,5.87,6.1,1,1,1,0,0,0,,,,,,,,,,0,1,6.21,stabile,66,39,,52,4.33,indisponibile,l'attaccante frenato nella seconda metà di luglio da una lesione di basso grado del bicipite femorale della coscia destra e out domenica scorsa a Frosinone. Da valutare nei prossimi allenamenti in vista di sabato sera contro il Parma nella 2a giornata di campionato.,2026-08-25
+6822,Ekhator,JUV,a,a,3,10,3,10,25,5.96,6.28,3,0,3,0,0,0,15,5.87,6.1,1,1,1,0,0,0,,,,,,,,,,0,1,6.21,stabile,66,39,,52,4.33,indisponibile,l'attaccante frenato nella seconda metà di luglio da una lesione di basso grado del bicipite femorale della coscia destra e out domenica scorsa a Frosinone. Da valutare nei prossimi allenamenti in vista di sabato sera contro il Parma nella 2a giornata di campionato.,2026-08-26
 7012,Provstgaard,LAZ,dc,d,3,14,3,14,23,5.91,5.85,0,0,3,0,0,0,1,6.5,6.5,0,0,1,0,0,0,,,,,,,,,,0,0,5.85,n_d,61,3,,32,7.67,,,
 7131,Floriani Mussolini,LAZ,dd/e,d,3,10,3,10,23,5.72,5.72,0,1,2,0,0,0,,,,,,,,,,,,,,,,,,,0,1,5.72,n_d,61,,,61,7.67,,,
 7248,Gorter,LEC,m/c,c,3,15,3,12,1,5.5,5.5,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,3,,,3,16.0,,,
@@ -395,22 +395,23 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 5295,Musah,MIL,c/w,c,3,15,3,15,16,5.94,6.09,1,0,1,0,0,0,26,5.69,5.67,0,2,5,0,0,0,25,5.92,5.86,0,1,5,0,0,0,0,1,5.92,stabile,42,68,66,59,5.0,,,
 7238,Kouadio,MON,dd/dc,d,3,10,3,9,1,6.0,6.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,1,,n_d,3,,,3,17.33,,,
 4925,Carboni A.,MON,ds/dc,d,4,11,3,9,,,,,,,,,,26,5.63,5.62,0,2,5,0,0,0,21,5.88,6.0,1,0,1,0,0,0,0,0,5.77,calante,,68,55,62,17.33,,,
-7477,Colombo L.,MON,m/c,c,3,8,3,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,17.33,indisponibile,il centrocampista acciaccato per noie fisiche e assente per sabato contro l'Udinese. Da valutare.,2026-08-25
+7477,Colombo L.,MON,m/c,c,3,8,3,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,17.33,indisponibile,il centrocampista acciaccato per noie fisiche e assente per sabato contro l'Udinese. Da valutare.,2026-08-26
 5131,Gilmour,NAP,m/c,c,3,10,3,10,13,6.08,6.27,1,0,1,0,0,0,17,6.0,6.06,0,1,0,0,0,0,,,,,,,,,,0,0,6.19,stabile,34,45,,40,4.33,,,
 7255,Britschgi,PAR,dd/ds/e,d,4,12,3,10,28,5.75,5.70,0,2,5,1,0,0,,,,,,,,,,,,,,,,,,,0,0,5.7,n_d,74,,,74,16.33,,,
 7138,Ordonez C.,PAR,m/c,c,3,6,3,5,21,5.79,5.81,1,0,3,1,0,0,,,,,,,,,,,,,,,,,,,0,0,5.81,n_d,55,,,55,16.33,,,
 7209,Sorensen O.,PAR,c,c,3,12,3,12,30,5.85,5.95,1,1,2,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.95,n_d,79,,,79,16.33,,,
 7342,Elphege,PAR,pc,a,3,10,3,11,8,6.0,6.88,2,1,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.88,n_d,21,,,21,16.33,,,
 4772,Angelino,ROM,e,d,3,12,3,12,6,5.83,5.67,0,0,2,0,0,0,38,6.14,6.32,2,1,1,0,0,0,16,5.94,5.88,0,2,2,0,0,0,0,0,5.91,stabile,16,100,42,53,4.67,,,
-6985,Candè,SAS,ds/dc,d,3,8,3,7,8,5.69,5.56,0,0,2,0,0,0,17,5.76,5.82,1,0,4,0,0,0,,,,,,,,,,0,0,5.66,stabile,21,45,,33,16.67,indisponibile,"il difensore a gennaio vittima della rottura legamento crociato anteriore ginocchio destro, punta a tornare convocabile dalla metà di settembre.",2026-08-25
+6985,Candè,SAS,ds/dc,d,3,8,3,7,8,5.69,5.56,0,0,2,0,0,0,17,5.76,5.82,1,0,4,0,0,0,,,,,,,,,,0,0,5.66,stabile,21,45,,33,16.67,indisponibile,"il difensore a gennaio vittima della rottura legamento crociato anteriore ginocchio destro, punta a tornare convocabile dalla metà di settembre.",2026-08-26
 7183,Aboukhlal,TOR,w/a,c,2,4,3,5,11,5.77,5.64,0,0,4,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.64,n_d,29,,,29,10.67,,,
-6925,Palma,UDI,dc,d,3,11,3,11,4,5.5,5.5,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,11,,,11,12.33,,,
+6925,Palma,UDI,dc,d,3,11,3,11,4,5.5,5.5,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,11,,,11,12.33,indisponibile,il difensore nel primo turno di A contro il Como costretto al cambio per un lieve problema muscolare all'adduttore della coscia destra che lo terrà ai box fino alla metà di settembre.,2026-08-26
 5994,Ebosse,UDI,ds/dc,d,3,5,3,5,16,5.75,5.72,0,1,4,0,0,0,2,5.5,5.25,0,0,1,0,0,0,0,0.0,0.0,0,0,0,0,0,0,0,1,5.72,n_d,42,5,0,16,12.33,,,
 6892,Schingtienne,VEN,dc,d,3,10,3,10,,,,,,,,,,15,5.7,5.63,0,0,2,0,0,0,,,,,,,,,,0,0,5.63,n_d,,39,,39,19.67,,,
-6673,Sverko,VEN,ds/dc,d,3,7,3,7,,,,,,,,,,14,5.75,5.86,1,0,3,0,0,0,,,,,,,,,,0,0,5.86,n_d,,37,,37,19.67,indisponibile,il difensore operato in estate per il perdurare di un problema all'anca e recuperabile da fine ottobre.,2026-08-25
+6673,Sverko,VEN,ds/dc,d,3,7,3,7,,,,,,,,,,14,5.75,5.86,1,0,3,0,0,0,,,,,,,,,,0,0,5.86,n_d,,37,,37,19.67,indisponibile,il difensore operato in estate per il perdurare di un problema all'anca e recuperabile da fine ottobre.,2026-08-26
 6821,Hainaut,VEN,dd/e,d,3,12,3,12,0,0.0,0.0,0,0,0,0,0,0,22,5.86,6.07,2,0,3,0,0,0,,,,,,,,,,0,1,6.07,n_d,0,58,,29,19.67,,,
 5872,Helgason,VEN,c/t,c,3,3,3,3,4,5.62,5.62,0,0,0,0,0,0,17,6.03,6.26,0,4,0,0,0,0,0,0.0,0.0,0,0,0,0,0,0,0,1,6.26,n_d,11,45,0,19,19.67,,,
 7154,Odenthal,SAS,dc,d,3,8,3,8,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,0,,,0,16.67,,,
+7605,Tchato,FRO,dd/e,d,3,8,3,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,19.33,,,
 7483,Alhassane,BOL,ds/e,d,2,6,2,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,7.33,,,
 6225,El Azzouzi O.,BOL,m/c,c,2,12,2,10,0,0.0,0.0,0,0,0,0,0,0,0,0.0,0.0,0,0,0,0,0,0,9,6.11,6.83,2,2,4,0,0,0,0,0,6.83,n_d,0,0,24,8,7.33,,,
 6896,Van Der Brempt,COM,dd/e,d,2,5,2,5,14,5.96,5.96,0,1,2,0,0,0,18,5.94,5.92,0,1,3,0,0,0,,,,,,,,,,0,0,5.95,stabile,37,47,,42,11.33,,,
@@ -422,20 +423,20 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 6980,Venturino,GEN,w,c,2,4,2,4,7,5.86,5.86,0,0,0,0,0,0,3,6.83,8.83,2,0,0,0,0,0,,,,,,,,,,0,1,5.86,n_d,18,8,,13,13.33,,,
 2814,Provedel,INT,por,p,2,5,2,5,27,6.26,5.35,0,0,1,0,27,1,29,5.98,4.53,0,0,0,0,42,0,30,6.23,5.13,0,0,0,0,33,0,0,1,5.06,stabile,71,76,79,75,1.33,,,
 2263,Lazzari,LAZ,dd/e,d,2,5,2,5,17,5.79,5.74,0,0,2,0,0,0,22,5.89,5.86,0,1,3,0,0,0,24,5.94,5.90,0,2,4,1,0,0,0,0,5.81,stabile,45,58,63,55,7.67,,,
-2728,Pellegrini Lu.,LAZ,ds/e,d,2,7,2,7,24,5.85,5.81,1,0,8,0,0,0,19,6.08,6.11,0,3,5,0,0,0,17,5.79,5.76,1,0,5,1,0,0,0,0,5.89,stabile,63,50,45,53,7.67,,,
+2728,Pellegrini Lu.,LAZ,ds/e,d,2,7,2,7,24,5.85,5.81,1,0,8,0,0,0,19,6.08,6.11,0,3,5,0,0,0,17,5.79,5.76,1,0,5,1,0,0,0,0,5.89,stabile,63,50,45,53,7.67,indisponibile,"Il terzino non al meglio per noie fisiche, forfait nel prossimo turno contro il Genoa. Da valutare.",2026-08-26
 6883,Jean,LEC,dc,d,2,4,2,4,5,5.8,5.7,0,0,1,0,0,0,18,5.75,5.75,0,0,0,0,0,0,,,,,,,,,,0,0,5.72,stabile,13,47,,30,16.0,,,
 7182,Ndaba,LEC,ds/e,d,2,5,2,5,9,5.5,5.5,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.5,n_d,24,,,24,16.0,,,
 7525,Diawara S.,MIL,ds/dc,d,2,4,2,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,5.0,,,
 7476,Bakoune,MON,dd/e,d,2,4,2,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,17.33,,,
-5880,Ciurria,MON,e/w,c,2,6,2,6,,,,,,,,,,17,5.79,6.0,1,1,1,0,0,0,22,5.86,5.86,0,1,2,0,0,0,0,0,5.94,stabile,,45,58,52,17.33,indisponibile,"il centrocampista non al meglio per noie fisiche, forfait per sabato contro l'Udinese. Da valutare.",2026-08-25
+5880,Ciurria,MON,e/w,c,2,6,2,6,,,,,,,,,,17,5.79,6.0,1,1,1,0,0,0,22,5.86,5.86,0,1,2,0,0,0,0,0,5.94,stabile,,45,58,52,17.33,indisponibile,"il centrocampista non al meglio per noie fisiche, forfait per sabato contro l'Udinese. Da valutare.",2026-08-26
 383,Petagna,MON,pc,a,2,5,2,5,,,,,,,,,,7,5.36,5.29,0,0,1,0,0,0,15,5.8,6.0,1,1,2,0,0,0,0,0,5.57,calante,,18,39,28,17.33,,,
 6638,Marin R.,NAP,dc,d,2,8,2,8,,,,,,,,,,3,6.0,5.83,0,0,1,0,0,0,,,,,,,,,,0,0,,n_d,,8,,8,4.33,,,
 7202,Ndiaye,PAR,dc,d,2,8,2,8,11,5.59,5.36,0,0,3,1,0,0,,,,,,,,,,,,,,,,,,,0,0,5.36,n_d,29,,,29,16.33,,,
-6219,Boloca,SAS,m/c,c,2,5,2,5,2,5.75,5.75,0,0,0,0,0,0,,,,,,,,,,30,5.85,5.82,1,0,6,1,0,0,0,0,5.82,n_d,5,,79,42,16.67,indisponibile,il centrocampista fuori causa per un problema al ginocchio e fuori causa in questo inizio di campionato. Da valutare rientro da metà settembre.,2026-08-25
+6219,Boloca,SAS,m/c,c,2,5,2,5,2,5.75,5.75,0,0,0,0,0,0,,,,,,,,,,30,5.85,5.82,1,0,6,1,0,0,0,0,5.82,n_d,5,,79,42,16.67,indisponibile,il centrocampista fuori causa per un problema al ginocchio e fuori causa in questo inizio di campionato. Da valutare rientro da metà settembre.,2026-08-26
 6246,Lipani,SAS,m/c,c,2,5,2,5,21,5.93,5.90,0,1,3,0,0,0,,,,,,,,,,7,6.0,6.0,0,0,0,0,0,0,0,0,5.93,stabile,55,,18,36,16.67,,,
 252,Biraghi,TOR,b/ds/e,d,2,6,2,5,11,5.59,5.59,0,0,0,0,0,0,21,5.83,5.86,1,0,1,0,0,0,28,5.96,6.11,2,5,8,0,0,0,0,0,5.78,calante,29,55,74,53,10.67,,,
 6021,Abankwah,UDI,dd/dc,d,2,12,2,10,,,,,,,,,,2,6.25,6.0,0,0,1,0,0,0,0,0.0,0.0,0,0,0,0,0,0,0,0,,n_d,,5,0,2,12.33,,,
-7418,Chakvetadze,UDI,w/t,c,2,6,2,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,12.33,indisponibile,"il georgiano a inizio luglio vittima della frattura al terzo metatarso del piede destro, può tornare arruolabile da inizio settembre.",2026-08-25
+7418,Chakvetadze,UDI,w/t,c,2,6,2,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,12.33,indisponibile,"il georgiano a inizio luglio vittima della frattura al terzo metatarso del piede destro, può tornare arruolabile da inizio settembre.",2026-08-26
 7249,Buksa,UDI,pc,a,2,4,2,4,21,5.88,6.24,3,0,3,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.24,n_d,55,,,55,12.33,,,
 7478,Franjic,VEN,b/ds/e,d,2,7,2,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,19.67,,,
 6681,Sagrado,VEN,dd/e,d,2,4,2,4,,,,,,,,,,3,5.5,5.33,0,0,1,0,0,0,,,,,,,,,,0,0,,n_d,,8,,8,19.67,,,
@@ -455,7 +456,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 7346,Raterink,CAG,dd/e,d,1,1,1,1,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,0,,,0,15.0,,,
 7165,Liteta,CAG,m/c,c,1,1,1,1,4,5.75,5.75,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,11,,,11,15.0,,,
 7338,Albarracin,CAG,a,a,1,1,1,1,2,6.0,6.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,5,,,5,15.0,,,
-7317,Trepy,CAG,pc,a,1,2,1,2,3,5.67,5.67,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,8,,,8,15.0,indisponibile,"Il calciatore ricoverato il 16 agosto dopo che avrebbe rischiato di annegare in piscina. Condizioni monitorate dallo staff medico rossoblù, tempi di recupero da valutare. Assente di certo nel prossimo turno di campionato.",2026-08-25
+7317,Trepy,CAG,pc,a,1,2,1,2,3,5.67,5.67,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,8,,,8,15.0,indisponibile,"Il calciatore ricoverato il 16 agosto dopo che avrebbe rischiato di annegare in piscina. Condizioni monitorate dallo staff medico rossoblù, tempi di recupero da valutare. Assente di certo nel prossimo turno di campionato.",2026-08-26
 7301,Tornqvist,COM,por,p,1,1,1,1,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,0,,,0,11.33,,,
 2809,Vigorito,COM,por,p,1,1,1,1,0,0.0,0.0,0,0,0,0,0,0,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,0,0,,n_d,0,0,,0,11.33,,,
 418,Goldaniga,COM,dc,d,1,1,1,1,0,0.0,0.0,0,0,0,0,0,0,30,5.83,5.73,1,0,10,1,0,0,13,5.65,5.54,0,0,3,0,0,0,0,0,5.65,stabile,0,79,34,38,11.33,,,
@@ -481,7 +482,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 6039,Cabal,JUV,b/ds/e,d,1,4,1,4,9,5.94,6.56,2,0,1,0,0,0,6,6.33,6.25,0,0,1,0,0,0,19,5.82,5.66,0,0,6,0,0,0,0,0,6.29,crescente,24,16,50,30,4.33,,,
 7337,Motta,LAZ,por,p,1,1,1,1,9,6.0,5.17,0,0,1,0,10,1,,,,,,,,,,,,,,,,,,,0,0,5.17,n_d,24,,,24,7.67,,,
 7534,Renzetti,LAZ,por,p,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,7.67,,,
-327,Patric,LAZ,dd/dc,d,1,1,1,1,10,5.85,5.75,0,0,2,0,0,0,8,5.62,5.88,1,0,2,0,0,0,19,6.08,6.29,2,0,4,0,0,0,0,0,5.9,calante,26,21,50,32,7.67,indisponibile,il difensore ai box per un problema fisico e out nella 2a di campionato contro il Genoa. Da valutare.,2026-08-25
+327,Patric,LAZ,dd/dc,d,1,1,1,1,10,5.85,5.75,0,0,2,0,0,0,8,5.62,5.88,1,0,2,0,0,0,19,6.08,6.29,2,0,4,0,0,0,0,0,5.9,calante,26,21,50,32,7.67,indisponibile,il difensore ai box per un problema fisico e out nella 2a di campionato contro il Genoa. Da valutare.,2026-08-26
 6191,Belahyane,LAZ,m/c,c,1,3,1,3,11,5.77,5.82,0,2,1,1,0,0,26,5.77,5.69,0,2,4,2,0,0,2,6.25,6.25,0,0,0,0,0,0,0,0,5.77,stabile,29,68,5,34,7.67,,,
 7345,Przyborek,LAZ,w/t,c,1,5,1,5,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,0,,,0,7.67,,,
 2401,Fruchtl,LEC,por,p,1,1,1,1,0,0.0,0.0,0,0,0,0,0,0,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,0,0,,n_d,0,0,,0,16.0,,,
@@ -495,8 +496,8 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 7475,Strajnar,MON,por,p,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,17.33,,,
 5399,Antov,MON,dc,d,1,2,1,2,,,,,,,,,,,,,,,,,,,0,0.0,0.0,0,0,0,0,0,0,0,0,,n_d,,,0,0,17.33,,,
 2845,Contini,NAP,por,p,1,1,1,1,0,0.0,0.0,0,0,0,0,0,0,0,0.0,0.0,0,0,0,0,0,0,1,6.0,6.0,0,0,0,0,0,0,0,0,,n_d,0,0,3,1,4.33,,,
-6809,Marianucci,NAP,dc,d,1,3,1,3,11,5.73,5.73,0,1,2,0,0,0,13,5.81,5.73,0,0,0,1,0,0,,,,,,,,,,0,1,5.73,stabile,29,34,,32,4.33,indisponibile,"Il difensore KO in amichevole l'8 agosto vittima di una lesione di alto grado del collaterale mediale del ginocchio sinistro. Tempi di recupero da valutare, ma rischia uno stop di almeno due mesi.",2026-08-25
-5481,Mazzocchi,NAP,dd/ds/e,d,1,3,1,3,9,5.94,5.94,0,1,0,1,0,0,10,5.7,5.65,0,0,2,0,0,0,25,5.68,5.64,0,2,4,1,0,0,0,0,5.79,crescente,24,26,66,39,4.33,indisponibile,il difensore venerdì 21 agosto si è allenato a parte per un sovraccarico al ginocchio destro e non era presente poi contro il Genoa. Da valutare in settimana le possibilità di rientro per domenica contro il Como al Maradona nella 2a giornata di A.,2026-08-25
+6809,Marianucci,NAP,dc,d,1,3,1,3,11,5.73,5.73,0,1,2,0,0,0,13,5.81,5.73,0,0,0,1,0,0,,,,,,,,,,0,1,5.73,stabile,29,34,,32,4.33,indisponibile,"Il difensore KO in amichevole l'8 agosto vittima di una lesione di alto grado del collaterale mediale del ginocchio sinistro. Tempi di recupero da valutare, ma rischia uno stop di almeno due mesi.",2026-08-26
+5481,Mazzocchi,NAP,dd/ds/e,d,1,3,1,3,9,5.94,5.94,0,1,0,1,0,0,10,5.7,5.65,0,0,2,0,0,0,25,5.68,5.64,0,2,4,1,0,0,0,0,5.79,crescente,24,26,66,39,4.33,indisponibile,il difensore venerdì 21 agosto si è allenato a parte per un sovraccarico al ginocchio destro e non era presente poi contro il Genoa. Da valutare in settimana le possibilità di rientro per domenica contro il Como al Maradona nella 2a giornata di A.,2026-08-26
 6662,Corvi,PAR,por,p,1,10,1,10,17,6.18,5.09,0,0,1,0,18,0,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,0,0,5.09,n_d,45,0,,22,16.33,,,
 6149,Carboni F.,PAR,ds/e,d,1,3,1,3,2,6.0,6.0,0,0,0,0,0,0,5,5.9,5.7,0,0,2,0,0,0,0,0.0,0.0,0,0,0,0,0,0,0,0,5.7,n_d,5,13,0,6,16.33,,,
 7276,Cremaschi,PAR,e/c,c,1,3,1,3,1,6.0,6.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,3,,,3,16.33,,,
@@ -507,7 +508,7 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 4518,Russo A.,SAS,por,p,1,1,1,1,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,0,,,0,16.67,,,
 4867,Turati,SAS,por,p,1,1,1,1,6,6.17,5.0,0,0,0,0,7,0,30,6.3,4.75,0,0,1,0,52,2,31,6.19,4.42,0,0,0,0,58,1,0,0,4.81,crescente,16,79,82,59,16.67,,,
 6189,Missori,SAS,dd/e,d,1,2,1,2,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,6,5.75,5.75,0,0,0,0,0,0,0,0,5.75,n_d,0,,16,8,16.67,,,
-7156,Pieragnolo,SAS,ds/e,d,1,1,1,1,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,0,,,0,16.67,indisponibile,il difensore sta proseguendo la fase di recupero dalla lesione legamento crociato anteriore gamba destra e ipotizziamo possa tornare convocabile da ottobre.,2026-08-25
+7156,Pieragnolo,SAS,ds/e,d,1,1,1,1,0,0.0,0.0,0,0,0,0,0,0,,,,,,,,,,,,,,,,,,,0,0,,n_d,0,,,0,16.67,indisponibile,il difensore sta proseguendo la fase di recupero dalla lesione legamento crociato anteriore gamba destra e ipotizziamo possa tornare convocabile da ottobre.,2026-08-26
 7157,Iannoni,SAS,m/c,c,1,1,1,1,5,6.0,6.5,1,0,3,0,0,0,,,,,,,,,,,,,,,,,,,0,0,6.5,n_d,13,,,13,16.67,,,
 7158,Moro L.,SAS,pc,a,1,1,1,1,6,5.58,5.5,0,0,1,0,0,0,,,,,,,,,,,,,,,,,,,0,0,5.5,n_d,16,,,16,16.67,,,
 7457,Mascardi,TOR,por,p,1,13,1,13,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,10.67,,,
@@ -539,3 +540,8 @@ player_id,nome,squadra,ruolo_mantra,ruolo_classic,mantra_qa,mantra_fvm,classic_q
 4468,Bleve,LEC,por,p,1,1,1,1,,,,,,,,,,,,,,,,,,,0,0.0,0.0,0,0,0,0,0,0,0,0,,n_d,,,0,0,16.0,,,
 7571,Laerke,LEC,w/a,c,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,16.0,,,
 7572,Comotto,MIL,m/c,c,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,5.0,,,
+7574,Foe Ondoa,MON,c,c,1,2,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,17.33,,,
+7575,Mout,MON,c,c,1,2,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,17.33,,,
+7599,Lulli,ROM,e,d,1,2,1,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,4.67,,,
+7603,Grabara,JUV,por,p,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,4.33,,,
+7604,Maye,MON,ds/dc,d,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,n_d,,,,,17.33,,,

@@ -411,6 +411,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 6821,Hainaut,VEN,d,dd/e,3,3,12,3,3,12
 5872,Helgason,VEN,c,c/t,3,3,3,3,3,3
 7154,Odenthal,SAS,d,dc,1,3,8,1,3,8
+7605,Tchato,FRO,d,dd/e,3,3,8,3,3,8
 7483,Alhassane,BOL,d,ds/e,2,2,6,2,2,6
 6225,El Azzouzi O.,BOL,c,m/c,2,2,10,2,2,12
 6896,Van Der Brempt,COM,d,dd/e,2,2,5,2,2,5
@@ -539,3 +540,8 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 4468,Bleve,LEC,p,por,1,1,1,1,1,1
 7571,Laerke,LEC,c,w/a,1,1,1,1,1,1
 7572,Comotto,MIL,c,m/c,1,1,1,1,1,1
+7574,Foe Ondoa,MON,c,c,1,1,2,1,1,2
+7575,Mout,MON,c,c,1,1,2,1,1,2
+7599,Lulli,ROM,d,e,1,1,3,1,1,2
+7603,Grabara,JUV,p,por,1,1,1,1,1,1
+7604,Maye,MON,d,ds/dc,1,1,1,1,1,1
