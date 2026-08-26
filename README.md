@@ -62,7 +62,8 @@ https://andreaorlandi29-sudo.github.io/Fantacalcio-Assistant-dati/dati.json
 ```
 
 - Contiene solo dati: nome, squadra, ruoli, quotazioni/FVM (Mantra e Classic),
-  statistiche e trend per stagione, indicatori calcolati, stato infortunio.
+  statistiche e trend per stagione, indicatori calcolati (inclusa la
+  **valutazione 1-20** per reparto, la stessa dell'Excel), stato infortunio.
   Nessun codice o strategia.
 - Aggiornato automaticamente: lo step 7 del workflow giornaliero genera il JSON
   (`scripts/genera_json.py`) e lo pusha nel repo pubblico (solo se cambia).

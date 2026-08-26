@@ -18,7 +18,7 @@ Struttura (oggetto con metadati + array 'giocatori'):
       "ruolo_classic": "a",
       "quotazioni": {"mantra": {"qa": 34, "fvm": 365},
                      "classic": {"qa": 34, "fvm": 365}},
-      "indicatori": {"fm_media_pesata": 8.97, "trend_fm": "n_d",
+      "indicatori": {"valutazione": 18, "fm_media_pesata": 8.97, "trend_fm": "n_d",
                      "continuita_pct": 47, "pos_media_squadra": 4.67,
                      "scommessa": false, "cambio_squadra": false},
       "stagioni": {"2025-26": {"pg":18,"mv":6.72,"fm":8.97,"gol":14,"assist":2,
@@ -37,10 +37,13 @@ import csv
 import datetime
 import json
 import re
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 DATASET = REPO / "data" / "dataset_unificato.csv"
+sys.path.insert(0, str(REPO / "scripts"))
+from genera_lista import valutazioni  # noqa: E402  (valutazione 1-20 per reparto)
 
 # statistica -> chiave leggibile nel JSON
 STAT_MAP = {"pg": "pg", "mv": "mv", "fm": "fm", "gol": "gol", "ass": "assist",
@@ -72,6 +75,7 @@ def _stagioni(header) -> list[str]:
 
 def costruisci(rows: list[dict], header: list[str]) -> dict:
     stagioni = _stagioni(header)
+    val_map = valutazioni()   # {player_id: valutazione 1-20}
     giocatori = []
     for r in rows:
         st_out = {}
@@ -100,6 +104,7 @@ def costruisci(rows: list[dict], header: list[str]) -> dict:
                 "classic": {"qa": _num(r["classic_qa"]), "fvm": _num(r["classic_fvm"])},
             },
             "indicatori": {
+                "valutazione": val_map.get(r["player_id"]),
                 "fm_media_pesata": _num(r["fm_media_pesata"]),
                 "trend_fm": r["trend_fm"] or None,
                 "continuita_pct": _num(r["continuita_pct"]),

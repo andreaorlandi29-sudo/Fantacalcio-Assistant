@@ -117,6 +117,25 @@ def _valuta_gruppo(giocatori: list[dict], preset: str):
     return out
 
 
+def valutazioni() -> dict:
+    """Ritorna {player_id: valutazione_1_20} per tutti i giocatori del dataset.
+
+    Usa la stessa logica di costruisci_righe (score ranking_reparto normalizzato
+    per reparto su 1-20; scommesse con stima prudente): cosi' il numero coincide
+    con quello dell'Excel.
+    """
+    with open(DATASET, encoding="utf-8") as f:
+        players = list(csv.DictReader(f))
+    per_gruppo = {g: [] for g in ORDINE}
+    for p in players:
+        per_gruppo[_gruppo(p["ruolo_mantra"])].append(p)
+    out = {}
+    for g in ORDINE:
+        for pid, (v, _scommessa) in _valuta_gruppo(per_gruppo[g], GRUPPO_PRESET[g]).items():
+            out[pid] = v
+    return out
+
+
 def costruisci_righe() -> list[dict]:
     with open(DATASET, encoding="utf-8") as f:
         players = list(csv.DictReader(f))
