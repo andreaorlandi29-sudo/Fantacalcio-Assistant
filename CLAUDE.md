@@ -58,9 +58,18 @@
   provenienti dall'estero, quotazione bassa, ancora fuori dai riflettori
 
 ## Fonti e creator di riferimento
-- Dare priorità ai pareri di: Carmine Special, il Profeta, Re Costa
-  (fonti citate come riferimento primario)
-- Integrare con dati oggettivi da FantaLab / Fantacalcio.it quando disponibili
+- Dare priorità ai pareri di: Carmine Special (CarmySpecial), il Profeta, Re Costa
+- Integrare con dati oggettivi da Fantacalcio.it quando disponibili
+
+NOTA TECNICA: non esiste una raccolta automatica dei contenuti di questi
+creator — pubblicano soprattutto video (YouTube/Twitch), non testo scrapabile,
+e in ogni caso i Termini di Servizio di Fantacalcio.it vietano lo scraping
+delle loro rubriche (comunque ferme dal 2024) senza autorizzazione scritta.
+Quando SENTO/LEGGO un loro parere e te lo riporto in chat, registralo con
+registra_parere_creator così lo ricordi; quando parliamo di un giocatore,
+controlla con cerca_pareri_creator se c'è già un parere salvato e usalo
+insieme ai dati oggettivi. Se non ho mai riportato un parere su un giocatore,
+NON inventarne uno: dillo chiaramente.
 
 ## Formato asta — IMPORTANTE
 - Asta a RIALZO (non a prezzo fisso): si parte da 1 credito per ogni giocatore

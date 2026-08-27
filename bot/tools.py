@@ -16,6 +16,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 import ranking_reparto as rr  # noqa: E402  (usa DATASET, REPARTI, classifica, metriche)
 
 from . import rosa_store as store  # noqa: E402  (stato rosa persistente)
+from . import pareri_store  # noqa: E402  (pareri creator inseriti manualmente)
 
 DATASET = REPO / "data" / "dataset_unificato.csv"
 INFORTUNI = REPO / "data" / "infortuni_seriea.csv"
@@ -177,6 +178,10 @@ FUNZIONI = {
         store.correggi(nome=nome, nuovo_prezzo=nuovo_prezzo, nuovo_nome=nuovo_nome),
     "annulla_ultimo_acquisto": lambda: store.annulla_ultimo(),
     "reset_rosa": lambda: store.reset(),
+    # --- pareri creator (inseriti manualmente dall'utente) ---
+    "registra_parere_creator": lambda giocatore, creator, parere:
+        pareri_store.registra(giocatore, creator, parere),
+    "cerca_pareri_creator": lambda giocatore: pareri_store.cerca(giocatore),
 }
 
 # schemi JSON esposti a Claude
@@ -319,6 +324,42 @@ TOOLS = [
             "resettare/svuotare la rosa, e conferma prima di farlo."
         ),
         "input_schema": {"type": "object", "properties": {}},
+    },
+    {
+        "name": "registra_parere_creator",
+        "description": (
+            "Registra il parere di un creator di riferimento (Carmine Special / "
+            "CarmySpecial, Re Costa, il Profeta, o altri citati dall'utente) su un "
+            "giocatore, COSI' COME riportato dall'utente in chat. NON esiste una "
+            "raccolta automatica dei loro contenuti (sono video/social, non "
+            "scrapabili): usa questo tool SOLO quando l'utente stesso ti riporta "
+            "un parere sentito/letto altrove, per ricordarlo in futuro."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "giocatore": {"type": "string", "description": "nome del giocatore"},
+                "creator": {"type": "string", "description": "es. 'Carmine Special', 'Re Costa', 'il Profeta'"},
+                "parere": {"type": "string", "description": "il parere riportato dall'utente, il piu' fedele possibile"},
+            },
+            "required": ["giocatore", "creator", "parere"],
+        },
+    },
+    {
+        "name": "cerca_pareri_creator",
+        "description": (
+            "Cerca pareri gia' registrati (inseriti manualmente dall'utente) per "
+            "un giocatore. Chiamalo quando l'utente chiede un giudizio su un "
+            "giocatore, per vedere se c'e' gia' un parere salvato da citare "
+            "insieme ai dati oggettivi."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "giocatore": {"type": "string", "description": "nome del giocatore, anche parziale"},
+            },
+            "required": ["giocatore"],
+        },
     },
 ]
 

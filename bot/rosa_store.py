@@ -19,8 +19,9 @@ tramite set_client() (vedi bot/... test), senza toccare il codice di produzione.
 """
 import csv
 import json
-import os
 from pathlib import Path
+
+from . import redis_conn
 
 REPO = Path(__file__).resolve().parent.parent
 DATASET = REPO / "data" / "dataset_unificato.csv"
@@ -46,31 +47,13 @@ TARGET = {
 }
 ORDINE = ["portieri", "difensori", "centrocampisti", "esterni", "attacco"]
 
-_client = None  # override per i test (fakeredis)
-
-
 def set_client(client):
     """Inietta un client redis (per i test). In produzione non si usa."""
-    global _client
-    _client = client
+    redis_conn.set_client(client)
 
 
 def _conn():
-    global _client
-    if _client is not None:
-        return _client
-    if os.environ.get("ROSA_FAKE"):          # solo per test locali
-        import fakeredis
-        _client = fakeredis.FakeStrictRedis(decode_responses=True)
-        return _client
-    url = os.environ.get("REDIS_URL")
-    if not url:
-        raise RuntimeError(
-            "Storage rosa non configurato: manca la variabile d'ambiente REDIS_URL. "
-            "Collega un Render Key Value (vedi docs/STORAGE_ROSA.md).")
-    import redis  # import lazy: il bot parte anche senza redis installato/config
-    _client = redis.from_url(url, decode_responses=True)
-    return _client
+    return redis_conn.get_client()
 
 
 def _int(v) -> int:

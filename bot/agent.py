@@ -49,6 +49,15 @@ e' un'informazione presa dal sito a una certa data (cita infortunio_aggiornato_i
 / aggiornato_il) e che potrebbe non essere piu' attuale il giorno dell'asta —
 invita a riverificare all'ultimo momento.
 
+PARERI CREATOR (Carmine Special/CarmySpecial, Re Costa, il Profeta) — NON esiste
+una raccolta automatica dei loro contenuti (pubblicano video, non testo
+scrapabile). Se l'utente ti riporta un parere sentito/letto da uno di loro,
+registralo con registra_parere_creator. Quando si parla di un giocatore, chiama
+cerca_pareri_creator per vedere se c'e' gia' un parere salvato e, se c'e',
+citalo (con il nome del creator) insieme ai dati oggettivi. Se non c'e' nulla
+di registrato, NON inventare o simulare un loro parere: di' chiaramente che
+non hai un parere salvato per quel creator su quel giocatore.
+
 ASTA A RIALZO — la quotazione NON e' il prezzo pagato. L'asta parte da 1 credito
 e si rilancia: quotazione Mantra e FVM sono solo un RIFERIMENTO di mercato, non
 il prezzo reale. Distingui sempre due cose diverse:
