@@ -79,30 +79,19 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: python3 scripts/invia_report.py
 
-      # Pubblica SOLO il JSON dei dati sul repo pubblico dedicato (GitHub Pages).
-      # Serve un PAT (secret DATA_REPO_TOKEN) con permesso Contents:write su quel
-      # repo, perche' il GITHUB_TOKEN e' limitato a questo repository.
-      # Se il secret non c'e' ancora, lo step si salta senza fallire.
-      - name: 7) Pubblica dati.json sul repo pubblico
-        env:
-          DATA_REPO_TOKEN: ${{ secrets.DATA_REPO_TOKEN }}
-          DATA_REPO: ${{ vars.DATA_REPO || 'andreaorlandi29-sudo/Fantacalcio-Assistant-dati' }}
+      # Pubblica dati.json nella ROOT di questo stesso repo (ora pubblico, Pages
+      # attivo). Nessun PAT/secret necessario: il GITHUB_TOKEN implicito basta,
+      # come per lo step 5. Stessa cartella dell'index.html gia' servito da Pages,
+      # cosi' il file e' raggiungibile su .../dati.json accanto alla pagina.
+      - name: 7) Pubblica dati.json (GitHub Pages, stesso repo)
         run: |
-          if [ -z "$DATA_REPO_TOKEN" ]; then
-            echo "DATA_REPO_TOKEN non impostato: salto la pubblicazione del JSON."
-            exit 0
-          fi
-          python3 scripts/genera_json.py --out build/dati.json
-          git clone --depth 1 "https://x-access-token:${DATA_REPO_TOKEN}@github.com/${DATA_REPO}.git" pubdata
-          cp build/dati.json pubdata/dati.json
-          cp public/index.html pubdata/index.html
-          cd pubdata
+          python3 scripts/genera_json.py --out dati.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add dati.json
           if git diff --cached --quiet; then
-            echo "JSON invariato: nessun commit sul repo pubblico."
+            echo "JSON invariato: nessun commit."
           else
-            git commit -m "Aggiorna dati pubblici ($(date -u +%Y-%m-%d))"
+            git commit -m "Aggiorna dati.json pubblico ($(date -u +%Y-%m-%d))"
             git push
           fi

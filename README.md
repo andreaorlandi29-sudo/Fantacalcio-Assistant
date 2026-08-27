@@ -16,7 +16,7 @@ Pipeline di raccolta dati (Serie A, da Fantacalcio.it — solo pagine **pubblich
 | `scripts/ranking_reparto.py` | Classifica per reparto (por/dif/cen/att) secondo il CLAUDE.md | stampa a schermo / `--csv` |
 | `scripts/genera_lista.py` | Lista Excel filtrabile (valutazione 1-20 per reparto, infortuni) | `lista_giocatori_<data>.xlsx` |
 | `scripts/invia_report.py` | Genera la lista e la invia via email (Gmail SMTP) — vedi `docs/REPORT_EMAIL.md` | email con allegato |
-| `scripts/genera_json.py` | Converte il dataset in JSON pulito per la pubblicazione | `build/dati.json` |
+| `scripts/genera_json.py` | Converte il dataset in JSON pulito per la pubblicazione | `dati.json` (root, servito da Pages) |
 
 Dato statico di supporto: `data/classifiche_squadre.csv` = posizioni finali di
 Serie A delle ultime 3 stagioni (fonte: Wikipedia). Usato per la colonna
@@ -48,26 +48,26 @@ Nessuna dipendenza esterna: bastano Python 3 e la libreria standard.
   Fantacalcio.it copre già quotazioni + storico. Si riprenderà solo se emergono dati
   specifici mancanti.
 
-## Dati pubblici (GitHub Pages)
+## Dati pubblici e sito (GitHub Pages)
 
-Questo repository resta **privato** (codice, `CLAUDE.md`, script). I **soli dati**
-dei giocatori vengono pubblicati in un repository **pubblico separato**
-`Fantacalcio-Assistant-dati` come un unico file JSON, servito via GitHub Pages.
+⚠️ **Questo repository è PUBBLICO** (dal 26/08/2026): codice, script e
+`CLAUDE.md` sono visibili a chiunque, non solo i dati. Scelta consapevole per
+tenere in un solo repo sia la pagina "Il Listone" sia il JSON dei dati, serviti
+entrambi da GitHub Pages dalla root del branch `main`.
 
-**URL pubblico del JSON** (l'unico pensato per essere condiviso con strumenti
-esterni — pagina web, bot Telegram, ecc.):
+**URL pubblico del JSON**:
 
 ```
-https://andreaorlandi29-sudo.github.io/Fantacalcio-Assistant-dati/dati.json
+https://andreaorlandi29-sudo.github.io/Fantacalcio-Assistant/dati.json
 ```
 
 - Contiene solo dati: nome, squadra, ruoli, quotazioni/FVM (Mantra e Classic),
   statistiche e trend per stagione, indicatori calcolati (inclusa la
   **valutazione 1-20** per reparto, la stessa dell'Excel), stato infortunio.
-  Nessun codice o strategia.
-- Aggiornato automaticamente: lo step 7 del workflow giornaliero genera il JSON
-  (`scripts/genera_json.py`) e lo pusha nel repo pubblico (solo se cambia).
-- Setup e manutenzione: vedi `docs/DATI_PUBBLICI.md`.
+- Aggiornato automaticamente: lo step 7 del workflow giornaliero rigenera
+  `dati.json` in root (`scripts/genera_json.py`) e lo pusha (solo se cambia),
+  usando il token integrato — nessun secret aggiuntivo necessario.
+- La pagina web (`index.html` in root) è caricata/aggiornata manualmente.
 
 ## Bot Telegram (Claude API)
 
