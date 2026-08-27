@@ -59,7 +59,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7314,Taylor K.,LAZ,c,c/t,13,13,57,13,13,57
 4728,Nkunku,MIL,a,a,13,13,20,14,14,20
 4317,N'Dicka,ROM,d,dc,13,13,44,13,13,44
-2038,Pinamonti,SAS,a,pc,13,13,51,12,12,48
+2038,Pinamonti,LAZ,a,pc,13,13,51,12,12,48
 5687,Vlasic,TOR,c,t,14,13,75,13,12,72
 6956,Solet,UDI,d,dc,13,13,46,13,13,46
 7547,Kevin Carlos,CAG,a,pc,13,13,37,12,12,34
@@ -310,6 +310,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 6618,Cissè A.,MIL,c,w/t,3,5,25,3,5,25
 7069,Fortini,TOR,d,e,5,5,12,4,4,12
 7564,Leysen F.,SAS,d,ds/dc,5,5,12,6,6,14
+7610,Birligea,FRO,a,pc,5,5,14,5,5,14
 22,De Roon,ATA,c,m/c,4,4,8,5,5,10
 6054,Moro N.,BOL,c,m/c,4,4,14,4,4,17
 6895,Dominguez B.,SAS,c,w/a,3,4,12,2,3,12
