@@ -32,7 +32,7 @@ Aggiungi queste chiavi (i valori NON vanno nel codice):
 | `ANTHROPIC_API_KEY` | la tua chiave Anthropic |
 | `WEBHOOK_SECRET` | una stringa casuale a tua scelta (es. 20+ caratteri) |
 | `CLAUDE_MODEL` | `claude-sonnet-5` |
-| `TELEGRAM_ALLOWED_USER_ID` | `50029785` |
+| `TELEGRAM_ALLOWED_USER_ID` | il tuo ID utente Telegram numerico (personale — non pubblicarlo) |
 
 Note:
 - **NON** impostare `PORT` (lo fornisce Render) né `RENDER_EXTERNAL_URL` (lo
