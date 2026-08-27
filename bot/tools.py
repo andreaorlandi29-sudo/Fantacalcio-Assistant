@@ -17,6 +17,7 @@ import ranking_reparto as rr  # noqa: E402  (usa DATASET, REPARTI, classifica, m
 
 from . import rosa_store as store  # noqa: E402  (stato rosa persistente)
 from . import pareri_store  # noqa: E402  (pareri creator inseriti manualmente)
+from . import scommesse_esterne_store as scommesse  # noqa: E402
 
 DATASET = REPO / "data" / "dataset_unificato.csv"
 INFORTUNI = REPO / "data" / "infortuni_seriea.csv"
@@ -182,6 +183,12 @@ FUNZIONI = {
     "registra_parere_creator": lambda giocatore, creator, parere:
         pareri_store.registra(giocatore, creator, parere),
     "cerca_pareri_creator": lambda giocatore: pareri_store.cerca(giocatore),
+    # --- scommesse esterne (ricerca web, non i 3 creator di riferimento) ---
+    "carica_scommesse_seed": lambda: scommesse.carica_seed(),
+    "cerca_scommesse_esterne": lambda giocatore: scommesse.cerca(giocatore),
+    "elenco_scommesse_esterne": lambda: scommesse.elenco(),
+    "registra_scommessa_esterna": lambda giocatore, squadra, ruolo, motivo, fonti=None:
+        scommesse.registra(giocatore, squadra, ruolo, motivo, fonti),
 }
 
 # schemi JSON esposti a Claude
@@ -359,6 +366,65 @@ TOOLS = [
                 "giocatore": {"type": "string", "description": "nome del giocatore, anche parziale"},
             },
             "required": ["giocatore"],
+        },
+    },
+    {
+        "name": "carica_scommesse_seed",
+        "description": (
+            "Carica nell'archivio le 12 scommesse a basso costo trovate in una "
+            "ricerca web su fonti generaliste (Fantacalcio.it, TuttoMercatoWeb, "
+            "Fanpage.it, Skuola.net), raccolte il 27/08/2026 e gia' incrociate "
+            "con le quotazioni. Operazione idempotente (si puo' richiamare piu' "
+            "volte senza duplicare). Chiamalo se l'utente chiede di caricare le "
+            "scommesse trovate dalla ricerca, o se elenco_scommesse_esterne "
+            "risulta vuoto ma l'utente si aspetta questi dati."
+        ),
+        "input_schema": {"type": "object", "properties": {}},
+    },
+    {
+        "name": "cerca_scommesse_esterne",
+        "description": (
+            "Cerca se un giocatore e' tra le scommesse esterne segnalate (fonti "
+            "generaliste, non i 3 creator di riferimento). Chiamalo quando si "
+            "parla di un giocatore per vedere se e' stato segnalato come "
+            "possibile sorpresa low-cost."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "giocatore": {"type": "string", "description": "nome del giocatore, anche parziale"},
+            },
+            "required": ["giocatore"],
+        },
+    },
+    {
+        "name": "elenco_scommesse_esterne",
+        "description": (
+            "Elenca TUTTE le scommesse esterne segnalate finora (fonti generaliste "
+            "di ricerca web). Usalo per richieste tipo 'dammi le scommesse trovate' "
+            "o 'quali sorprese avevi trovato online'."
+        ),
+        "input_schema": {"type": "object", "properties": {}},
+    },
+    {
+        "name": "registra_scommessa_esterna",
+        "description": (
+            "Registra una NUOVA scommessa/sorpresa segnalata dall'utente da una "
+            "fonte generalista (articolo, sito, ecc. — non uno dei 3 creator di "
+            "riferimento, per quelli usa registra_parere_creator). Usalo solo "
+            "quando l'utente ti riporta una segnalazione specifica."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "giocatore": {"type": "string"},
+                "squadra": {"type": "string", "description": "sigla 3 lettere"},
+                "ruolo": {"type": "string", "description": "ruolo Mantra, es. 'dc' o 'w/t'"},
+                "motivo": {"type": "string"},
+                "fonti": {"type": "array", "items": {"type": "string"},
+                          "description": "nomi delle fonti citate (opzionale)"},
+            },
+            "required": ["giocatore", "squadra", "ruolo", "motivo"],
         },
     },
 ]

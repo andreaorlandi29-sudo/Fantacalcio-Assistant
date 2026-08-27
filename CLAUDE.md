@@ -56,6 +56,11 @@
 ## Scommesse
 - Inserire OGNI ANNO almeno 2-3 giocatori "scommessa": giovani emergenti o
   provenienti dall'estero, quotazione bassa, ancora fuori dai riflettori
+- Archivio di partenza: 12 nomi raccolti da una ricerca web su fonti generaliste
+  (Fantacalcio.it, TuttoMercatoWeb, Fanpage.it, Skuola.net), citati da almeno
+  2 fonti indipendenti, incrociati con le quotazioni (27/08/2026). Non è una
+  raccolta automatica/continua: consultabile con cerca_scommesse_esterne /
+  elenco_scommesse_esterne; nuove segnalazioni si aggiungono se le riporto io
 
 ## Fonti e creator di riferimento
 - Dare priorità ai pareri di: Carmine Special (CarmySpecial), il Profeta, Re Costa
