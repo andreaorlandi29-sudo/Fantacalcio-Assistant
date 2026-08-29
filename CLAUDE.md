@@ -61,6 +61,11 @@
   2 fonti indipendenti, incrociati con le quotazioni (27/08/2026). Non è una
   raccolta automatica/continua: consultabile con cerca_scommesse_esterne /
   elenco_scommesse_esterne; nuove segnalazioni si aggiungono se le riporto io
+- Secondo batch (27/08/2026): 25 nomi aggiuntivi da fonti meno generaliste/di
+  nicchia (SOS Fanta, PazziDiFanta, Fantamaster), anch'essi incrociati con le
+  quotazioni. A differenza del primo batch, qui la maggior parte ha UNA sola
+  fonte (eccezione: Adzic, 2 fonti indipendenti) — il bot deve trattarli con
+  un filo di cautela in più e dirlo se chiesto quante fonti li confermano
 
 ## Fonti e creator di riferimento
 - Dare priorità ai pareri di: Carmine Special (CarmySpecial), il Profeta, Re Costa
