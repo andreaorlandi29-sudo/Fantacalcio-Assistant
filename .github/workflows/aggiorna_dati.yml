@@ -5,10 +5,17 @@ name: Aggiorna dati Fantacalcio
 
 on:
   schedule:
-    # cron in UTC. 08:00 UTC = 10:00 in Italia d'estate (CEST) / 09:00 d'inverno (CET).
-    # GitHub non gestisce l'ora legale: da fine ottobre l'orario italiano sara' 09:00
-    # (per riavere le 10:00 in inverno, cambiare in "0 9 * * *").
-    - cron: "0 8 * * *"
+    # cron in UTC. 07:53 UTC = 09:53 in Italia d'estate (CEST) / 08:53 d'inverno (CET).
+    # GitHub non gestisce l'ora legale: da fine ottobre l'orario italiano sara' 08:53
+    # (per riavere le 09:53 in inverno, cambiare in "53 8 * * *").
+    #
+    # Minuto non tondo (53 invece di 00) DI PROPOSITO: GitHub Actions esegue gli
+    # schedule "best effort" e avvisa che i ritardi sono piu' probabili proprio
+    # a inizio ora (":00"), il momento piu' affollato su tutta la piattaforma.
+    # Il 27-28/08/2026 il trigger e' scattato con ~10-12 ore di ritardo (verso
+    # le 20:30/21:40 CEST invece che alle 10:00) mentre era impostato su "0 8 * * *":
+    # spostare il minuto e' la mitigazione standard consigliata da GitHub.
+    - cron: "53 7 * * *"
   workflow_dispatch: {}   # avvio manuale dalla tab Actions (per testarlo subito)
 
 # serve per far pushare il commit automatico con il token integrato GITHUB_TOKEN
