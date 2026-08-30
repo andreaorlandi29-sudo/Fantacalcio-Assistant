@@ -53,7 +53,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7351,Santos A.,NAP,a,w/a,14,14,62,15,15,62
 7023,Pellegrino M.,FIO,a,pc,15,14,50,15,14,47
 6572,Castro S.,ROM,a,pc,14,14,76,13,13,73
-4463,Esposito Se.,CAG,a,a,13,13,40,14,14,40
+4463,Esposito Se.,SAS,a,a,13,13,40,14,14,40
 5800,Gudmundsson A.,FIO,c,t/a,13,13,40,12,12,40
 4976,Kalulu,JUV,d,dd/dc,13,13,46,14,14,48
 7314,Taylor K.,LAZ,c,c/t,13,13,57,13,13,57
@@ -80,6 +80,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 5982,Spence,INT,d,e,12,12,40,11,11,37
 6372,Moreira,MIL,c,w,12,12,50,12,12,47
 5172,Jones C.,INT,c,c,12,12,48,12,12,48
+1850,Kessiè,ATA,c,c,12,12,47,12,12,47
 6844,Rowe,BOL,c,w/t,11,11,44,11,11,47
 6967,Diao,COM,a,w/a,11,11,47,12,12,50
 5750,Ostigard,GEN,d,dc,11,11,43,11,11,43
@@ -90,6 +91,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 4220,Zambo Anguissa,NAP,c,c,11,11,47,11,11,47
 6684,Ekkelenkamp,UDI,c,c/t,10,11,45,10,11,45
 6229,Tourè E.,PAR,a,pc,11,11,43,11,11,43
+4179,Gonzalez N.,JUV,c,w/a,11,11,41,10,10,38
 5526,Scalvini,ATA,d,dc,10,10,28,10,10,28
 133,Skorupski,BOL,p,por,10,10,36,10,10,36
 4360,Caprile,CAG,p,por,9,10,28,9,10,28
@@ -115,7 +117,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 2077,Pasalic,ATA,c,c/t,9,9,24,9,9,24
 184,Bernardeschi,BOL,c,w/t,9,9,30,9,9,30
 1933,Mandragora,FIO,c,c,9,9,23,9,9,23
-6530,Ghedjemis,FRO,a,w/a,9,9,27,10,10,30
+6530,Ghedjemis,FRO,a,w/a,9,9,23,10,10,25
 5514,Vasquez,GEN,d,ds/dc,9,9,32,10,10,35
 6274,Diouf,INT,c,e/c,8,9,44,9,10,47
 2848,Frattesi,LAZ,c,c/t,7,9,68,7,9,68
@@ -127,11 +129,12 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 2134,Falcone,LEC,p,por,8,9,30,8,9,30
 6989,Tiago Gabriel,LEC,d,dc,7,9,20,7,9,20
 5029,Geubbels,LEC,a,pc,9,9,23,8,8,20
-2155,Cutrone,MON,a,pc,9,9,33,8,8,30
+2155,Cutrone,MON,a,pc,9,9,30,8,8,27
 6717,Konè I.,SAS,c,c,9,9,20,9,9,20
 6462,Okoye,UDI,p,por,9,9,29,9,9,29
 5641,Chalobah T.,COM,d,dd/dc,9,9,30,10,10,32
 7612,Bobcek,FRO,a,pc,9,9,38,9,9,38
+6534,Perri,TOR,p,por,9,9,26,9,9,26
 6046,Hien,ATA,d,dc,8,8,11,8,8,11
 554,Zappacosta,ATA,d,dd/e,8,8,19,8,8,19
 4364,Gaetano,ATA,c,m/c,7,8,30,8,9,35
@@ -153,7 +156,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 827,Locatelli,JUV,c,m/c,8,8,33,9,9,38
 6320,Doekhi,LAZ,d,dc,7,8,16,7,8,16
 6496,Bartesaghi,MIL,d,ds/e,8,8,22,8,8,22
-5878,Colpani,MON,c,t,8,8,25,7,7,22
+5878,Colpani,MON,c,t,8,8,15,7,7,13
 5427,Gutierrez,NAP,d,ds/e,8,8,26,8,8,26
 1852,Spinazzola,NAP,d,ds/e,8,8,25,8,8,25
 4287,Lobotka,NAP,c,m/c,7,8,22,8,8,27
@@ -169,6 +172,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 6727,Couto,COM,d,dd/e,8,8,26,8,8,26
 7551,Schmid,FRO,c,w/t,8,8,28,8,8,30
 7600,Osmajic,GEN,a,pc,8,8,30,7,7,27
+5675,Theate,BOL,d,ds/dc,8,8,20,9,9,22
 787,Djimsiti,ATA,d,dc,7,7,16,7,7,16
 5858,Ferguson,BOL,c,m/c,7,7,23,8,8,27
 5701,Obert,CAG,d,b/ds/e,7,7,15,7,7,17
@@ -178,7 +182,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7414,Kaiki,COM,d,ds/e,7,7,16,7,7,16
 5365,Dragusin,FIO,d,dc,8,7,27,8,7,27
 7472,Calò,FRO,c,m/c,7,7,25,8,8,28
-5436,Raimondo,FRO,a,pc,7,7,22,6,6,19
+5436,Raimondo,FRO,a,pc,7,7,15,6,6,15
 5791,Frendrup,GEN,c,m/c,7,7,20,8,8,25
 5877,Carlos Augusto,INT,d,b/ds/e,7,7,25,8,8,27
 6669,Bonny,INT,a,pc,7,7,18,6,6,15
@@ -241,7 +245,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 6549,Pierotti,LEC,c,w,6,6,19,5,5,17
 7008,Gimenez,MIL,a,pc,6,6,10,5,5,10
 7485,Mangas,MON,d,ds/e,6,6,15,6,6,15
-6593,Akinsanmiro,MON,c,c,6,6,16,6,6,16
+6593,Akinsanmiro,MON,c,c,6,6,12,6,6,12
 6202,Beukema,NAP,d,dc,6,6,12,6,6,12
 6831,Neres,NAP,a,w/a,6,6,17,7,7,20
 6663,Circati,PAR,d,dc,6,6,18,6,6,18
@@ -253,7 +257,8 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7253,Bella-Kotchap,VEN,d,dc,6,6,13,6,6,13
 5674,Basic,VEN,c,m/c,6,6,19,7,7,20
 7329,Obrador,SAS,d,ds/e,6,6,15,6,6,15
-7146,Tourè I.,MON,c,e/m,6,6,15,8,8,19
+7146,Tourè I.,MON,c,e/m,6,6,14,8,8,17
+4705,Balerdi,ROM,d,dc,6,6,11,6,6,11
 2640,Kolasinac,ATA,d,ds/dc,5,5,8,6,6,10
 4896,Maldini,CAG,a,t/a,5,5,21,6,6,21
 7068,Vitik,BOL,d,dc,5,5,10,5,5,10
@@ -285,8 +290,8 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7203,Jashari,MIL,c,c,4,5,13,4,5,13
 6519,Camarda,MIL,a,pc,5,5,20,4,4,17
 4485,Thiam,MON,p,por,5,5,11,5,5,11
-5882,Mota,MON,a,a,5,5,18,5,5,18
-7523,Varela G.,MON,a,pc,3,5,7,3,5,6
+5882,Mota,MON,a,a,5,5,10,5,5,10
+7523,Varela G.,MON,a,pc,3,5,20,3,5,17
 2170,Milinkovic-Savic V.,NAP,p,por,5,5,7,5,5,7
 5840,Olivera,NAP,d,b/ds/e,5,5,13,6,6,15
 6898,Keita M.,PAR,c,m/c,5,5,15,6,6,17
@@ -330,7 +335,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7473,Cichella,FRO,c,m/c,4,4,12,4,4,15
 7474,Koutsoupias,FRO,c,c,4,4,11,4,4,11
 6506,Fini,FRO,c,w,3,4,13,2,3,13
-6204,Kvernadze,FRO,a,w/a,4,4,16,5,5,19
+6204,Kvernadze,FRO,a,w/a,4,4,17,5,5,20
 7537,Mitaj,GEN,d,ds/e,4,4,10,4,4,10
 4970,Messias,GEN,c,w/t,3,4,8,3,4,8
 7453,Havel,GEN,a,pc,4,4,9,3,3,7
@@ -341,12 +346,12 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7322,Ngom,LEC,c,m/c,4,4,13,5,5,16
 5739,De Winter,MIL,d,dd/dc,3,4,12,4,5,14
 5273,Estupinan,MIL,d,ds/e,3,4,13,3,4,13
-5453,Ricci S.,MIL,c,m/c,4,4,10,4,4,12
+5453,Ricci S.,COM,c,m/c,4,4,10,4,4,12
 4199,Loftus-Cheek,MIL,c,c/t,4,4,18,4,4,18
 2115,Delli Carri,MON,d,dc,4,4,11,4,4,11
-6659,Lucchesi,MON,d,dc,4,4,12,4,4,12
+6659,Lucchesi,MON,d,dc,4,4,11,4,4,11
 5838,Birindelli,MON,d,dd/ds/e,4,4,12,5,5,14
-6252,Folorunsho,NAP,c,c/t,4,4,5,4,4,5
+6252,Folorunsho,MON,c,c/t,4,4,17,4,4,17
 7162,Giovane,NAP,a,a,4,4,10,4,4,10
 7120,Lang,NAP,a,a,3,4,12,3,4,12
 6215,Lucca,NAP,a,pc,3,4,10,3,4,9
@@ -369,7 +374,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7208,Miller L.,UDI,c,m/c,3,4,12,3,4,15
 7272,Gueye,UDI,a,pc,4,4,7,3,3,6
 7538,Halhal,VEN,d,dc,4,4,10,4,4,10
-7546,Robinson J.,MON,a,a,4,4,10,4,4,10
+7546,Robinson J.,MON,a,a,4,4,5,4,4,5
 4375,Terzic,FRO,d,ds/e,4,4,8,4,4,8
 7563,Favasuli,NAP,d,dd/ds/e,4,4,11,5,5,13
 7602,Fatah,LEC,a,w/a,4,4,17,5,5,18
@@ -397,9 +402,9 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7001,N'Dri,LEC,a,w/a,3,3,15,4,4,17
 7211,Athekame,MIL,d,dd/e,3,3,8,3,3,8
 5295,Musah,MIL,c,c/w,2,3,15,2,3,15
-7238,Kouadio,MON,d,dd/dc,3,3,9,3,3,10
+7238,Kouadio,MON,d,dd/dc,3,3,14,3,3,10
 4925,Carboni A.,MON,d,ds/dc,3,3,9,4,4,11
-7477,Colombo L.,MON,c,m/c,3,3,7,3,3,8
+7477,Colombo L.,MON,c,m/c,3,3,4,3,3,5
 5131,Gilmour,NAP,c,m/c,3,3,10,3,3,10
 7255,Britschgi,PAR,d,dd/ds/e,3,3,10,4,4,12
 7138,Ordonez C.,PAR,c,m/c,2,3,5,2,3,6
@@ -547,8 +552,10 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7572,Comotto,MIL,c,m/c,1,1,1,1,1,1
 7396,Macchioni,SAS,d,dc,1,1,1,1,1,1
 7574,Foe Ondoa,MON,c,c,1,1,2,1,1,2
-7575,Mout,MON,c,c,1,1,2,1,1,2
+7575,Mout,MON,c,c,1,1,12,1,1,12
+5462,Ciervo,CAG,c,w,1,1,1,1,1,1
 7599,Lulli,ROM,d,e,1,1,3,1,1,2
 7603,Grabara,JUV,p,por,1,1,1,1,1,1
 7604,Maye,MON,d,ds/dc,1,1,1,1,1,1
 7611,Mrozek,UDI,p,por,1,1,1,1,1,1
+7615,Drobnic,PAR,d,dc,1,1,1,1,1,1
