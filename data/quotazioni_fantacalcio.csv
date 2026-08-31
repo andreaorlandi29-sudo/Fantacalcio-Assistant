@@ -302,7 +302,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7036,Bakola,SAS,c,c/t,5,5,14,5,5,14
 6426,Pedersen,TOR,d,dd/e,5,5,12,5,5,12
 7060,Cacciamani,TOR,c,e/w,5,5,20,6,6,23
-6827,Njie,TOR,c,w/a,4,5,14,3,4,16
+6827,Njie,FIO,c,w/a,4,5,23,3,4,21
 7198,Piotrowski,UDI,c,m/c,5,5,15,6,6,17
 6890,Moreno M.,VEN,d,dc,5,5,6,5,5,6
 4845,Correia T.,VEN,d,dd/e,4,5,12,4,5,12
@@ -318,7 +318,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7564,Leysen F.,SAS,d,ds/dc,5,5,12,6,6,14
 7610,Birligea,FRO,a,pc,5,5,14,5,5,14
 6145,Ngonge,MON,a,a,5,5,13,5,5,13
-22,De Roon,ATA,c,m/c,4,4,8,5,5,10
+22,De Roon,ROM,c,m/c,4,4,8,5,5,10
 6054,Moro N.,BOL,c,m/c,4,4,14,4,4,17
 6895,Dominguez B.,SAS,c,w/a,3,4,12,2,3,12
 7268,Rodriguez Ju.,CAG,d,ds/dc,3,4,14,4,5,17
@@ -378,6 +378,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 4375,Terzic,FRO,d,ds/e,4,4,8,4,4,8
 7563,Favasuli,NAP,d,dd/ds/e,4,4,11,5,5,13
 7602,Fatah,LEC,a,w/a,4,4,17,5,5,18
+7579,Massolin,CAG,c,c/t,4,4,12,4,4,12
 5578,Kossounou,ATA,d,dd/dc,3,3,12,3,3,12
 6024,Sulemana I.,ATA,c,m/c,3,3,7,3,3,8
 5498,Casale,BOL,d,dc,3,3,5,3,3,5
@@ -424,7 +425,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 6601,Kambwala,COM,d,dd/dc,3,3,8,4,4,9
 7483,Alhassane,BOL,d,ds/e,2,2,6,2,2,6
 6225,El Azzouzi O.,BOL,c,m/c,2,2,10,2,2,12
-6896,Van Der Brempt,COM,d,dd/e,2,2,5,2,2,5
+6896,Van Der Brempt,SAS,d,dd/e,2,2,5,2,2,5
 6815,Fadera,CAG,c,w,2,2,12,2,2,10
 7463,Desplanches,FRO,p,por,2,2,3,2,2,3
 6977,Otoa,GEN,d,dc,2,2,5,2,2,5
@@ -513,7 +514,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7276,Cremaschi,PAR,c,e/c,1,1,3,1,1,3
 7048,De Marzi,ROM,p,por,1,1,1,1,1,1
 610,Gollini,ROM,p,por,1,1,1,1,1,1
-7260,Ziolkowski,ROM,d,dc,1,1,2,1,1,2
+7260,Ziolkowski,MON,d,dc,1,1,2,1,1,2
 6981,Vaz,ROM,a,pc,1,1,4,1,1,3
 4518,Russo A.,SAS,p,por,1,1,1,1,1,1
 4867,Turati,SAS,p,por,1,1,1,1,1,1
@@ -559,3 +560,4 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7604,Maye,MON,d,ds/dc,1,1,1,1,1,1
 7611,Mrozek,UDI,p,por,1,1,1,1,1,1
 7615,Drobnic,PAR,d,dc,1,1,1,1,1,1
+6826,Dembelè A.,LEC,d,dd/e,1,1,2,1,1,2
