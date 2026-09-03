@@ -221,6 +221,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7220,Belghali,TOR,d,dd/e,7,7,20,7,7,20
 5680,Sarr P.,JUV,c,m/c,7,7,25,8,8,27
 7623,Gnonto,FIO,a,w/a,7,7,25,8,8,27
+795,El Shaarawy,GEN,c,w,7,7,25,6,6,23
 2640,Kolasinac,ATA,d,ds/dc,5,6,8,6,7,10
 6916,Ahanor,ATA,d,b/ds/e,6,6,13,7,6,15
 4887,Bellanova,ATA,d,dd/e,6,6,17,6,6,17
@@ -487,6 +488,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7599,Lulli,ROM,d,e,1,2,10,1,2,10
 7615,Drobnic,PAR,d,dc,1,2,1,1,2,1
 7092,Jovanovic,UDI,c,w/t,2,2,5,2,2,5
+7627,Enem,BOL,a,pc,2,2,4,2,2,4
 2297,Rossi F.,ATA,p,por,1,1,1,1,1,1
 4,Sportiello,ATA,p,por,1,1,1,1,1,1
 7533,Happonen,BOL,p,por,1,1,1,1,1,1
