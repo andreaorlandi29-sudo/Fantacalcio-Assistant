@@ -71,9 +71,12 @@ input[type=file]{ display:none; }
 /* CONTROLS */
 .controls{ position: sticky; top: var(--mast-h, 76px); z-index:29; background: var(--paper-panel); border-bottom: 1px solid var(--rule-strong); padding: 10px clamp(14px,4vw,36px); display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
 .search-wrap{ position:relative; flex:1 1 200px; min-width:170px; }
-.search-wrap input{ width:100%; padding:9px 12px 9px 30px; border:1px solid var(--rule-strong); border-radius: var(--radius); background: var(--paper-panel-2); font-family: var(--sans); font-size:14px; color:var(--ink); }
+.search-wrap input{ width:100%; padding:9px 30px 9px 30px; border:1px solid var(--rule-strong); border-radius: var(--radius); background: var(--paper-panel-2); font-family: var(--sans); font-size:14px; color:var(--ink); }
 .search-wrap input::placeholder{ color: var(--ink-faint); }
 .search-wrap svg{ position:absolute; left:9px; top:50%; transform:translateY(-50%); opacity:0.5; }
+.search-wrap .clear-btn{ position:absolute; right:6px; top:50%; transform:translateY(-50%); width:20px; height:20px; border:none; background:transparent; color: var(--ink-faint); cursor:pointer; display:none; align-items:center; justify-content:center; border-radius:999px; padding:0; }
+.search-wrap .clear-btn:hover{ color: var(--ink); background: var(--paper-panel); }
+.search-wrap.has-text .clear-btn{ display:flex; }
 select{ font-family: var(--mono); font-size:12px; text-transform:uppercase; border:1px solid var(--rule-strong); border-radius: var(--radius); background: var(--paper-panel-2); padding:8px 10px; color:var(--ink); cursor:pointer; }
 .chip{ font-family: var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.03em; border:1px solid var(--rule-strong); border-radius:999px; padding:6px 12px; cursor:pointer; background: var(--paper-panel-2); color: var(--ink-soft); user-select:none; }
 .chip.on{ background: var(--red-soft); border-color: var(--red); color: var(--red); }
@@ -339,6 +342,9 @@ footer{ padding: 26px clamp(14px,4vw,36px) 50px; font-family: var(--mono); font-
   <div class="search-wrap">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
     <input type="text" id="search" placeholder="Cerca nome o squadra&hellip;">
+    <button type="button" class="clear-btn" id="search-clear" title="Svuota" aria-label="Svuota ricerca">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
   </div>
   <select id="sort-select">
     <option value="fm_desc" selected>Fantamedia pesata — dalla più alta</option>
@@ -661,7 +667,21 @@ function updateBudgetPills(){
 }
 
 function wireControls(){
-  document.getElementById("search").addEventListener("input",e=>{state.query=e.target.value;render();});
+  const searchInput = document.getElementById("search");
+  const searchWrap = searchInput.closest(".search-wrap");
+  const searchClear = document.getElementById("search-clear");
+  searchInput.addEventListener("input",e=>{
+    state.query=e.target.value;
+    searchWrap.classList.toggle("has-text", e.target.value.length>0);
+    render();
+  });
+  searchClear.addEventListener("click",()=>{
+    searchInput.value="";
+    state.query="";
+    searchWrap.classList.remove("has-text");
+    searchInput.focus();
+    render();
+  });
   document.getElementById("sort-select").addEventListener("change",e=>{state.sort=e.target.value;render();});
   document.getElementById("chip-injured").addEventListener("click",e=>{state.onlyInjured=!state.onlyInjured;e.target.classList.toggle("on");render();});
   document.getElementById("chip-bet").addEventListener("click",e=>{state.onlyBet=!state.onlyBet;e.target.classList.toggle("on");render();});
