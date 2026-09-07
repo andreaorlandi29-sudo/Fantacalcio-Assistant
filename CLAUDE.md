@@ -52,6 +52,14 @@
 - Guardare al TREND di rendimento (non solo l'ultima stagione isolata)
 - Tenere sempre conto di: cambio squadra, cambio allenatore, impatto atteso
   su minutaggio e ruolo
+- Dal 07/09/2026 il dataset include anche le statistiche della stagione IN
+  CORSO (2026/27, colonne *_2026_27) accanto alle 3 stagioni storiche
+  concluse. La stagione in corso NON entra nel calcolo di fm_media_pesata,
+  trend_fm, cambio_squadra o nessuno_storico (troppo poche giornate per
+  essere uno storico affidabile — vedi scripts/unisci_dataset.py), ma i dati
+  grezzi (pg/mv/fm/gol/assist ecc. del 2026/27) sono disponibili e vanno
+  citati quando rilevanti (es. un giocatore in forma o fuori forma nelle
+  prime giornate), sempre specificando che e' un campione piccolo
 
 ## Scommesse
 - Inserire OGNI ANNO almeno 2-3 giocatori "scommessa": giovani emergenti o

@@ -16,8 +16,14 @@ Colonne statistiche (data-col-key nella pagina):
   ass = assist                amm = ammonizioni       esp = espulsioni
 
 Uso:
-    python3 scripts/estrai_statistiche.py                       # 3 stagioni default
+    python3 scripts/estrai_statistiche.py                       # 4 stagioni default
     python3 scripts/estrai_statistiche.py 2025-26 2024-25       # stagioni scelte
+
+Include anche la stagione IN CORSO (2026-27): la stessa pagina, durante il
+campionato, mostra le statistiche accumulate fin li' (partite a voto minori
+di 38). scripts/unisci_dataset.py riconosce da solo quale stagione e' ancora
+in corso e la tratta di conseguenza (esclusa da storico/trend/media pesata,
+vedi li' per i dettagli).
 
 Output (formato "lungo": una riga per giocatore per stagione):
     data/statistiche_seriea.csv
@@ -34,7 +40,7 @@ BASE = "https://www.fantacalcio.it/statistiche-serie-a"
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120 Safari/537.36")
 OUT = Path(__file__).resolve().parent.parent / "data" / "statistiche_seriea.csv"
-STAGIONI_DEFAULT = ["2025-26", "2024-25", "2023-24"]
+STAGIONI_DEFAULT = ["2026-27", "2025-26", "2024-25", "2023-24"]
 PAUSA_SEC = 3  # cortesia tra una richiesta e l'altra
 
 HEADER = ["player_id", "nome", "squadra", "stagione",

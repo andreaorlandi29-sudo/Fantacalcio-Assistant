@@ -12,20 +12,43 @@ storiche (data/statistiche_seriea.csv), piu' le colonne calcolate qui sotto.
 
 Colonne calcolate:
   nessuno_storico     1 se il giocatore non ha alcuna presenza nelle stagioni
-                      considerate (rookie / arrivi dall'estero / neopromosse) -> filtrabile come "scommessa"
+                      STORICHE/concluse (rookie / arrivi dall'estero / neopromosse)
+                      -> filtrabile come "scommessa". Le presenze nella sola
+                      stagione IN CORSO non bastano a togliere questo flag:
+                      qualche partita giocata nell'annata corrente non e' ancora
+                      uno storico su cui basare un giudizio.
   cambio_squadra      1 se la squadra 2026/27 (quotazioni) e' diversa da quella
-                      dell'ultima stagione con dati; "" se nessuno storico
-  fm_media_pesata     media della fantamedia sulle stagioni VALIDE, con pesi
-                      50% ultima / 30% penultima / 20% terzultima (rinormalizzati
-                      sulle stagioni effettivamente presenti)
-  trend_fm            crescente / stabile / calante / n_d  (confronto fantamedia
-                      tra prima e ultima stagione valida; soglia +/-0.3)
-  pres_pct_<st>       % presenze nella stagione (partite a voto / 38)
-  continuita_pct      media delle % presenze sulle stagioni con dati
+                      dell'ultima stagione STORICA con dati; "" se nessuno
+                      storico. Si confronta apposta con l'ultima stagione
+                      CONCLUSA (non quella in corso, che per definizione ha
+                      gia' la squadra attuale e renderebbe il flag sempre 0).
+  fm_media_pesata     media della fantamedia sulle stagioni STORICHE valide, con
+                      pesi 50% ultima / 30% penultima / 20% terzultima
+                      (rinormalizzati sulle stagioni effettivamente presenti).
+                      La stagione in corso NON entra in questo calcolo: a
+                      campionato appena iniziato pochi voti falserebbero la
+                      media pesata calibrata sulle stagioni complete.
+  trend_fm            crescente / stabile / calante / n_d (confronto fantamedia
+                      tra prima e ultima stagione STORICA valida; soglia +/-0.3;
+                      stagione in corso esclusa, stesso motivo di sopra)
+  pres_pct_<st>       % presenze nella stagione. Per le stagioni concluse e' sulle
+                      38 giornate del campionato; per la stagione IN CORSO e'
+                      sulle giornate disputate FINORA (altrimenti un titolare
+                      fisso da 3/3 presenze apparirebbe con l'8%, non il 100%)
+  continuita_pct      media delle % presenze sulle stagioni con dati (stagione
+                      in corso inclusa, con il denominatore corretto sopra)
 
-NB: una stagione e' "valida" per media pesata e trend solo se il giocatore ha
-almeno SOGLIA_PG_VALIDA presenze: cosi' una fantamedia gonfiata da 1-2 partite
-non falsa il giudizio. Le presenze % invece si calcolano su tutte le stagioni.
+NB: una stagione STORICA e' "valida" per media pesata e trend solo se il
+giocatore ha almeno SOGLIA_PG_VALIDA presenze: cosi' una fantamedia gonfiata
+da 1-2 partite non falsa il giudizio. Le presenze % invece si calcolano su
+tutte le stagioni con dati, storiche o in corso.
+
+STAGIONE IN CORSO: rilevata automaticamente (nessuna costante da aggiornare
+ogni anno) come la piu' recente tra quelle presenti in statistiche_seriea.csv,
+SE il numero massimo di presenze fra tutti i giocatori in quella stagione e'
+ancora sotto le 38 giornate (campionato non ancora concluso). A fine
+campionato, quando anche l'ultima stagione raggiunge le 38 giornate, rientra
+automaticamente a essere trattata come storica.
 
 Uso:  python3 scripts/unisci_dataset.py
 Output:  data/dataset_unificato.csv
@@ -98,6 +121,17 @@ def main() -> int:
     stagioni = sorted({r["stagione"] for r in stat}, reverse=True)
     idx = {(r["player_id"], r["stagione"]): r for r in stat if r["player_id"]}
 
+    # stagione IN CORSO: la piu' recente, se il suo massimo di presenze fra
+    # tutti i giocatori e' ancora sotto le 38 giornate (vedi docstring).
+    corrente, giornate_corrente = None, None
+    if stagioni:
+        piu_recente = stagioni[0]
+        pg_vals = [_f(r["pg"]) for r in stat if r["stagione"] == piu_recente]
+        mx = max((v for v in pg_vals if v is not None), default=0)
+        if 0 < mx < PARTITE_STAGIONE:
+            corrente, giornate_corrente = piu_recente, mx
+    stagioni_storiche = [st for st in stagioni if st != corrente]
+
     def suf(st: str) -> str:
         return st.replace("-", "_")  # 2025-26 -> 2025_26
 
@@ -128,25 +162,32 @@ def main() -> int:
                 row[f"{k}_{suf(st)}"] = s[src] if s else ""
 
         # --- colonne calcolate ---
-        row["nessuno_storico"] = 0 if stagioni_dati else 1
+        # "storico" = solo stagioni CONCLUSE (la stagione in corso non conta
+        # come storico su cui basare un giudizio, vedi docstring)
+        storiche_dati = {st: stagioni_dati[st] for st in stagioni_storiche if st in stagioni_dati}
+        row["nessuno_storico"] = 0 if storiche_dati else 1
 
-        # cambio squadra: confronto con l'ultima stagione (piu' recente) con dati
-        if stagioni_dati:
-            ultima = next(st for st in stagioni if st in stagioni_dati)
-            sq_prec = stagioni_dati[ultima]["squadra"].strip().upper()
+        # cambio squadra: confronto con l'ultima stagione STORICA con dati
+        # (mai con quella in corso, che ha gia' la squadra 2026/27 per definizione)
+        if storiche_dati:
+            ultima = next(st for st in stagioni_storiche if st in storiche_dati)
+            sq_prec = storiche_dati[ultima]["squadra"].strip().upper()
             row["cambio_squadra"] = 1 if q["squadra"].strip().upper() != sq_prec else 0
         else:
             row["cambio_squadra"] = ""
 
-        # presenze % per stagione + continuita media
+        # presenze % per stagione + continuita media (denominatore 38 per le
+        # stagioni concluse, giornate disputate finora per quella in corso)
         pres_list = []
         for st in stagioni:
             s = stagioni_dati.get(st)
             pg = _f(s["pg"]) if s else None
             if pg is not None:
-                pct = round(100 * pg / PARTITE_STAGIONE)
+                denom = giornate_corrente if st == corrente else PARTITE_STAGIONE
+                pct = round(100 * pg / denom) if denom else ""
                 row[f"pres_pct_{suf(st)}"] = pct
-                pres_list.append(pct)
+                if pct != "":
+                    pres_list.append(pct)
             else:
                 row[f"pres_pct_{suf(st)}"] = ""
         row["continuita_pct"] = round(sum(pres_list) / len(pres_list)) if pres_list else ""
@@ -160,9 +201,10 @@ def main() -> int:
         row["dettaglio_infortunio"] = inf["dettaglio_infortunio"] if inf else ""
         row["infortunio_aggiornato_il"] = inf["aggiornato_il"] if inf else ""
 
-        # stagioni VALIDE (pg >= soglia) con fantamedia, dalla piu' recente
+        # stagioni STORICHE valide (pg >= soglia) con fantamedia, dalla piu' recente
+        # (la stagione in corso e' esclusa: vedi docstring)
         valide = []  # (indice_stagione, fm)
-        for i, st in enumerate(stagioni):
+        for i, st in enumerate(stagioni_storiche):
             s = stagioni_dati.get(st)
             if not s:
                 continue
@@ -204,6 +246,11 @@ def main() -> int:
     print(f"  con storico Serie A: {con_storico}  |  senza storico (scommesse): {len(righe)-con_storico}")
     print(f"  con cambio squadra 2026/27: {cambi}")
     print(f"  stagioni incluse: {', '.join(stagioni)}")
+    if corrente:
+        print(f"  stagione in corso rilevata: {corrente} ({giornate_corrente} giornate finora) "
+              "- esclusa da nessuno_storico/cambio_squadra/fm_media_pesata/trend_fm")
+    else:
+        print("  nessuna stagione in corso rilevata (tutte concluse)")
     return 0
 
 
