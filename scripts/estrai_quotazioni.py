@@ -56,6 +56,11 @@ def parse(raw: str) -> list[list[str]]:
         nome = ihtml.unescape(nome_m.group(1).strip()) if nome_m else ""
         if not nome:
             continue
+        # Fantacalcio.it marca esplicitamente chi ha lasciato la Serie A (es.
+        # trasferimento estero durante il mercato) con questo asterisco/tooltip
+        # accanto al nome: li escludiamo, non vanno messi all'asta.
+        if 'class="out-of-game"' in b:
+            continue
         # ID univoco giocatore dall'href: .../squadre/<team>/<slug>/<ID>
         id_m = re.search(r'/serie-a/squadre/[^"/]+/[^"/]+/(\d+)', b)
         player_id = id_m.group(1) if id_m else ""
