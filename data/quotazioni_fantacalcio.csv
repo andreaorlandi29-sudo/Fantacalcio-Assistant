@@ -500,7 +500,6 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 252,Biraghi,TOR,d,b/ds/e,2,1,5,2,1,6
 5007,Ilic,LEC,c,m/c,1,1,10,1,1,13
 543,Padelli,UDI,p,por,1,1,1,1,1,1
-5707,Piana,UDI,p,por,1,1,1,1,1,1
 7418,Chakvetadze,UDI,c,w/t,2,1,6,2,1,6
 7161,Bayo V.,UDI,a,pc,1,1,3,1,1,3
 6671,Grandi,VEN,p,por,1,1,1,1,1,1
@@ -531,3 +530,4 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7622,Robinho Junior,GEN,a,a,1,1,2,1,1,2
 7626,Pompei,ATA,p,por,1,1,1,1,1,1
 7628,Sierro,PAR,c,m/c,1,1,1,1,1,1
+7629,Libra,BOL,c,c/t,1,1,1,1,1,1
