@@ -472,7 +472,6 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 6039,Cabal,JUV,d,b/ds/e,1,1,4,1,1,4
 7337,Motta,LAZ,p,por,1,1,1,1,1,1
 7534,Renzetti,LAZ,p,por,1,1,1,1,1,1
-327,Patric,LAZ,d,dd/dc,1,1,1,1,1,1
 2263,Lazzari,LAZ,d,dd/e,2,1,5,2,1,5
 2728,Pellegrini Lu.,LAZ,d,ds/e,2,1,7,2,1,7
 7345,Przyborek,LAZ,c,w/t,1,1,5,1,1,5
@@ -534,3 +533,4 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7627,Enem,BOL,a,pc,2,1,4,2,1,4
 7629,Libra,BOL,c,c/t,1,1,2,1,1,2
 5850,Lovric,UDI,c,c,1,1,1,1,1,1
+283,Neto,JUV,p,por,1,1,1,1,1,1
