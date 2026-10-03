@@ -79,7 +79,11 @@ jobs:
       # Genera la lista Excel e la invia via email (sempre, anche se i dati non
       # sono cambiati). Se manca un secret o l'invio fallisce, il job va in
       # errore -> notifica GitHub. Usa il dataset appena rigenerato su disco.
-      - name: 6) Genera e invia la lista via email
+      #
+      # DISATTIVATO su richiesta dell'utente (03/10/2026): l'invio quotidiano
+      # non serve piu'. Per riattivarlo basta rimuovere la riga "if: false".
+      - name: 6) Genera e invia la lista via email (DISATTIVATO)
+        if: false
         env:
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
