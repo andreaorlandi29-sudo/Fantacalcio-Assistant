@@ -8,7 +8,7 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 7017,Douvikas,COM,a,pc,20,27,146,20,27,146
 2423,Pulisic,MIL,c,t/a,25,26,165,23,26,165
 6435,Krstovic,ATA,a,pc,18,24,167,17,23,167
-6052,Hojlund,NAP,a,pc,28,24,200,28,24,200
+6052,Hojlund,NAP,a,pc,28,24,190,28,24,190
 254,Dimarco,INT,d,e/w,32,23,135,30,22,135
 7556,Mora,ROM,c,t,19,23,55,18,22,53
 7126,Baturina,COM,c,t,19,22,160,18,22,160
@@ -18,8 +18,8 @@ player_id,nome,squadra,ruolo_classic,ruolo_mantra,classic_qi,classic_qa,classic_
 5734,Soulè,ROM,a,a,12,21,87,13,22,87
 7472,Calò,FRO,c,m/c,7,20,100,8,20,120
 7071,Esposito F.P.,INT,a,pc,16,20,83,16,20,80
-6397,Ramos G.,MIL,a,pc,27,20,175,27,20,175
-7523,Varela G.,MON,a,pc,3,20,140,3,20,140
+6397,Ramos G.,MIL,a,pc,27,20,180,27,20,180
+7523,Varela G.,MON,a,pc,3,20,170,3,20,170
 7078,Mastantuono,FIO,c,w/t,12,19,85,12,19,85
 6372,Moreira,MIL,c,e/w,12,19,80,12,19,82
 6752,Woltemade,JUV,a,a,23,19,38,23,19,38
